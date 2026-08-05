@@ -12,7 +12,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-<script src="./image-slot.js"></script>
 <style>
   body { margin: 0; background: #FFFBF4; color: #11120D; font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
   a { color: inherit; text-decoration: none; }
@@ -39,7 +38,7 @@
 
   <header id="top" style="display: flex; flex-wrap: wrap; align-items: center; padding: clamp(28px,5vw,56px) clamp(20px,4vw,40px) clamp(24px,4vw,44px); animation: fadeUp 0.7s ease both; gap: 0px; padding-bottom: 77px">
     <div style="flex: 1 1 320px; min-width: 0; height: clamp(260px,34vw,430px); position: relative; z-index: 0">
-      <image-slot id="h-hero" data-max-dim="2000" data-quality="0.85" shape="rect" fit="cover" placeholder="Signature work or portrait" style="width: 100%; height: 100%"></image-slot>
+      <img src="uploads/h-hero.png" alt="" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:0">
     </div>
     <div style="flex:1 1 340px; min-width:0; position:relative; z-index:1; margin-left:clamp(16px, 2vw, 32px); margin-top:clamp(0px, 3vw, 24px); pointer-events:none">
       <span style="display: block; margin-bottom: clamp(12px,2vw,20px); font-family: Open Sans; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #565449">Lauren Anderson — Portfolio 2026</span>
@@ -59,27 +58,27 @@
     <div ref="{{ railRef }}" onMouseDown="{{ onDown }}" onMouseMove="{{ onMove }}" onMouseUp="{{ onUp }}" onMouseLeave="{{ onUp }}" onWheel="{{ onWheel }}" tabIndex="0" style="display:flex; gap:clamp(14px,2.4vw,24px); padding:0 clamp(20px,4vw,40px) clamp(40px,6vw,72px); overflow-x:auto; scrollbar-width:none; cursor:grab; user-select:none; scroll-snap-type:x mandatory; scroll-padding-left:clamp(20px,4vw,40px); -webkit-overflow-scrolling:touch">
       <a href="discover-santa-clara.html" style="scroll-snap-align:start; display:flex; flex-direction:column; gap:10px; flex:0 0 clamp(240px,72vw,282px); min-width:0">
         <div style="display:flex; justify-content:space-between; font-family:'Open Sans',sans-serif; font-size:10px; letter-spacing:0.09em; text-transform:uppercase"><span style="font-size: 12px">DISCOVER SANTA CLARA</span><span style="color: #565449; font-size: 12px">2024</span></div>
-        <div style="height:clamp(280px,40vw,340px); width:100%; min-width:0"><image-slot id="h-4" data-no-lightbox="" shape="rect" placeholder="Discover Santa Clara — website &amp; guide"></image-slot></div>
+        <div style="height:clamp(280px,40vw,340px); width:100%; min-width:0"><img src="uploads/h-4.png" alt="" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:0"></div>
         <div style="display:flex; flex-direction:column; gap:3px; font-family:'Open Sans',sans-serif; font-size:10px; letter-spacing:0.09em; text-transform:uppercase"><span style="font-size: 12px">WEBSITE, VISITOR GUIDE, &amp; DESIGN SYSTEM</span><span style="color: #565449; text-transform: none; letter-spacing: 0.02em; font-size: 10px">Travel · Designer</span></div>
       </a>
       <a href="visit-bellevue.html" style="scroll-snap-align:start; display:flex; flex-direction:column; gap:10px; flex:0 0 clamp(240px,72vw,282px); min-width:0">
         <div style="display:flex; justify-content:space-between; font-family:'Open Sans',sans-serif; font-size:10px; letter-spacing:0.09em; text-transform:uppercase"><span style="font-size: 12px">Visit Bellevue</span><span style="color: #565449; font-size: 12px">2022-2024</span></div>
-        <div style="height:clamp(280px,40vw,340px); width:100%; min-width:0"><image-slot id="h-6" data-no-lightbox="" shape="rect" placeholder="Visit Bellevue — publication"></image-slot></div>
+        <div style="height:clamp(280px,40vw,340px); width:100%; min-width:0"><img src="uploads/h-6.png" alt="" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:0"></div>
         <div style="display:flex; flex-direction:column; gap:3px; font-family:'Open Sans',sans-serif; font-size:10px; letter-spacing:0.09em; text-transform:uppercase"><span style="font-size: 12px">Publication Design</span><span style="color: #565449; text-transform: none; letter-spacing: 0.02em; font-size: 10px">Travel &amp; Tourism · Art Director &amp; Designer</span></div>
       </a>
       <a href="grand-canyon-west.html" style="scroll-snap-align:start; display:flex; flex-direction:column; gap:10px; flex:0 0 clamp(240px,72vw,282px); min-width:0">
         <div style="display:flex; justify-content:space-between; font-family:'Open Sans',sans-serif; font-size:10px; letter-spacing:0.09em; text-transform:uppercase"><span style="font-size: 12px">Grand Canyon West</span><span style="color: #565449; font-size: 12px">2023</span></div>
-        <div style="height:clamp(280px,40vw,340px); width:100%; min-width:0"><image-slot id="h-2" data-no-lightbox="" shape="rect" placeholder="Grand Canyon West — app"></image-slot></div>
+        <div style="height:clamp(280px,40vw,340px); width:100%; min-width:0"><img src="uploads/h-2.png" alt="" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:0"></div>
         <div style="display:flex; flex-direction:column; gap:3px; font-family:'Open Sans',sans-serif; font-size:10px; letter-spacing:0.09em; text-transform:uppercase"><span style="font-size: 12px">Application Design</span><span style="color: #565449; text-transform: none; letter-spacing: 0.02em; font-size: 10px">Hospitality · Art Director</span></div>
       </a>
       <a href="cosmos.html" style="scroll-snap-align:start; display:flex; flex-direction:column; gap:10px; flex:0 0 clamp(240px,72vw,282px); min-width:0">
         <div style="display:flex; justify-content:space-between; font-family:'Open Sans',sans-serif; font-size:10px; letter-spacing:0.09em; text-transform:uppercase"><span style="font-size: 12px">COSMOS</span><span style="color: #565449; font-size: 12px">2021</span></div>
-        <div style="height:clamp(280px,40vw,340px); width:100%; min-width:0"><image-slot id="h-7" data-no-lightbox="" shape="rect" placeholder="Cosmos — event marketing"></image-slot></div>
+        <div style="height:clamp(280px,40vw,340px); width:100%; min-width:0"><img src="uploads/h-7.png" alt="" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:0"></div>
         <div style="display:flex; flex-direction:column; gap:3px; font-family:'Open Sans',sans-serif; font-size:10px; letter-spacing:0.09em; text-transform:uppercase"><span style="font-size: 12px">Marketing Campaign<br></span><span style="color: #565449; text-transform: none; letter-spacing: 0.02em; font-size: 10px">Science &amp; Tech · Designer</span></div>
       </a>
       <a href="planterra.html" style="scroll-snap-align:start; display:flex; flex-direction:column; gap:10px; flex:0 0 clamp(240px,72vw,282px); min-width:0">
         <div style="display:flex; justify-content:space-between; font-family:'Open Sans',sans-serif; font-size:10px; letter-spacing:0.09em; text-transform:uppercase"><span style="font-size: 12px">PLANTERRA</span><span style="color: #565449; font-size: 12px">2020-2021</span></div>
-        <div style="height:clamp(280px,40vw,340px); width:100%; min-width:0"><image-slot id="h-5" data-no-lightbox="" shape="rect" placeholder="Planterra — mobile app"></image-slot></div>
+        <div style="height:clamp(280px,40vw,340px); width:100%; min-width:0"><img src="uploads/h-5.png" alt="" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:0"></div>
         <div style="display:flex; flex-direction:column; gap:3px; font-family:'Open Sans',sans-serif; font-size:10px; letter-spacing:0.09em; text-transform:uppercase"><span style="font-size: 12px">MOBILE APPLICATION &amp; DESIGN SYSTEM</span><span style="color: #565449; text-transform: none; letter-spacing: 0.02em; font-size: 10px">Consumer Technology · UI Designer UX Researcher</span></div>
       </a>
     </div>
