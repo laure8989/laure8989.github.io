@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #FFFBF4; color: #11120D; font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: inherit; }
+  ::selection { background: #11120D; color: #FFFBF4; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+</helmet>
+
+<div style="width:100%; max-width:1440px; margin:0 auto; background:#FFFBF4; overflow-x:hidden">
+
+  <a href="#work" style="position:absolute; left:-9999px; top:0; background:#11120D; color:#FFFBF4; padding:12px 18px; font-family:'Open Sans',sans-serif; font-size:11px" style-focus="left:12px; top:12px; z-index:20">Skip to work</a>
+
+  <nav aria-label="Primary" style="position:relative; display:flex; flex-wrap:wrap; align-items:center; gap:14px clamp(16px,3vw,26px); padding:clamp(16px,3vw,24px) clamp(20px,4vw,40px); border-bottom:1px solid #ECE5D8; font-family:'Open Sans',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase">
+    <div style="order:1; flex:1 1 150px; display:flex; flex-wrap:wrap; gap:12px clamp(16px,2.4vw,26px)">
+      <a href="uploads/LAUREN ANDERSON - Graphic Designer Resume.pdf" style="padding: 6px 0; font-family: Open Sans; font-size: 12px; font-weight: 400" style-hover="color:#565449">Resume</a>
+    </div>
+    <a href="#top" style="order: 2; flex: 0 1 auto; text-align: center; font-family: Bodoni Moda; font-size: 16px; letter-spacing: 0.22em; white-space: nowrap; font-weight: 400">LAUREN&nbsp;ANDERSON</a>
+    <div style="order:3; flex:1 1 150px; display:flex; justify-content:flex-end; gap:clamp(16px,2.4vw,26px)">
+      <a href="contact.html" style="padding: 6px 0; border-bottom: 1px solid #11120D; font-family: Open Sans; font-size: 12px; font-weight: 400">Contact</a>
+    </div>
+  </nav>
+
+  <header id="top" style="display: flex; flex-wrap: wrap; align-items: center; padding: clamp(28px,5vw,56px) clamp(20px,4vw,40px) clamp(24px,4vw,44px); animation: fadeUp 0.7s ease both; gap: 0px; padding-bottom: 77px">
+    <div style="flex: 1 1 320px; min-width: 0; height: clamp(260px,34vw,430px); position: relative; z-index: 0">
+      <image-slot id="h-hero" data-max-dim="2000" data-quality="0.85" shape="rect" fit="cover" placeholder="Signature work or portrait" style="width: 100%; height: 100%"></image-slot>
+    </div>
+    <div style="flex:1 1 340px; min-width:0; position:relative; z-index:1; margin-left:clamp(16px, 2vw, 32px); margin-top:clamp(0px, 3vw, 24px); pointer-events:none">
+      <span style="display: block; margin-bottom: clamp(12px,2vw,20px); font-family: Open Sans; font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: #565449">Lauren Anderson — Portfolio 2026</span>
+      <h1 style="margin:0; font-family:'Bodoni Moda',serif; font-weight:400; font-size:clamp(40px,7.2vw,90px); line-height:0.94; letter-spacing:-0.02em; text-wrap:balance">UI, Branding<br>&amp; Marketing<br>Designer</h1>
+    </div>
+  </header>
+
+  <section id="about" style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:clamp(24px,4vw,64px); padding:0 clamp(20px,4vw,40px) clamp(28px,4vw,40px)">
+    <p style="margin: 0; flex: 1 1 320px; max-width: 70ch; font-size: 14px; line-height: 1.6; color: #565449; text-wrap: pretty; font-family: Open Sans; text-align: left">I'm Lauren! A graphic designer and art director based in Cincinnati. I have been building brands by growing their visual presence through print, web, and digital marketing designs. With nearly 7 years of experience, I have become a master in my craft and love creating connection that grow businesses.</p>
+    <dl style="margin:0; flex:0 1 auto; display:flex; flex-wrap:wrap; gap:20px clamp(24px,4vw,48px); font-family:'Open Sans',sans-serif; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:#565449">
+      <div style="display:flex; flex-direction:column; gap:6px"><dt style="font-family: Open Sans; font-size: 12px; font-weight: 700">Based</dt><dd style="margin: 0; color: #11120D; font-family: Open Sans; font-size: 12px; text-align: left">Cincinnati, OH</dd></div>
+      <div style="display:flex; flex-direction:column; gap:6px"><dt style="font-family: Open Sans; font-size: 12px; font-weight: 700">Focus</dt><dd style="margin: 0; color: #11120D; font-family: Open Sans; font-size: 12px; text-align: left">VISUAL DESIGN</dd></div>
+    </dl>
+  </section>
+
+  <section id="work" aria-label="Selected work">
+    <div ref="{{ railRef }}" onMouseDown="{{ onDown }}" onMouseMove="{{ onMove }}" onMouseUp="{{ onUp }}" onMouseLeave="{{ onUp }}" onWheel="{{ onWheel }}" tabIndex="0" style="display:flex; gap:clamp(14px,2.4vw,24px); padding:0 clamp(20px,4vw,40px) clamp(40px,6vw,72px); overflow-x:auto; scrollbar-width:none; cursor:grab; user-select:none; scroll-snap-type:x mandatory; scroll-padding-left:clamp(20px,4vw,40px); -webkit-overflow-scrolling:touch">
+      <a href="discover-santa-clara.html" style="scroll-snap-align:start; display:flex; flex-direction:column; gap:10px; flex:0 0 clamp(240px,72vw,282px); min-width:0">
+        <div style="display:flex; justify-content:space-between; font-family:'Open Sans',sans-serif; font-size:10px; letter-spacing:0.09em; text-transform:uppercase"><span style="font-size: 12px">DISCOVER SANTA CLARA</span><span style="color: #565449; font-size: 12px">2024</span></div>
+        <div style="height:clamp(280px,40vw,340px); width:100%; min-width:0"><image-slot id="h-4" data-no-lightbox="" shape="rect" placeholder="Discover Santa Clara — website &amp; guide"></image-slot></div>
+        <div style="display:flex; flex-direction:column; gap:3px; font-family:'Open Sans',sans-serif; font-size:10px; letter-spacing:0.09em; text-transform:uppercase"><span style="font-size: 12px">WEBSITE, VISITOR GUIDE, &amp; DESIGN SYSTEM</span><span style="color: #565449; text-transform: none; letter-spacing: 0.02em; font-size: 10px">Travel · Designer</span></div>
+      </a>
+      <a href="visit-bellevue.html" style="scroll-snap-align:start; display:flex; flex-direction:column; gap:10px; flex:0 0 clamp(240px,72vw,282px); min-width:0">
+        <div style="display:flex; justify-content:space-between; font-family:'Open Sans',sans-serif; font-size:10px; letter-spacing:0.09em; text-transform:uppercase"><span style="font-size: 12px">Visit Bellevue</span><span style="color: #565449; font-size: 12px">2022-2024</span></div>
+        <div style="height:clamp(280px,40vw,340px); width:100%; min-width:0"><image-slot id="h-6" data-no-lightbox="" shape="rect" placeholder="Visit Bellevue — publication"></image-slot></div>
+        <div style="display:flex; flex-direction:column; gap:3px; font-family:'Open Sans',sans-serif; font-size:10px; letter-spacing:0.09em; text-transform:uppercase"><span style="font-size: 12px">Publication Design</span><span style="color: #565449; text-transform: none; letter-spacing: 0.02em; font-size: 10px">Travel &amp; Tourism · Art Director &amp; Designer</span></div>
+      </a>
+      <a href="grand-canyon-west.html" style="scroll-snap-align:start; display:flex; flex-direction:column; gap:10px; flex:0 0 clamp(240px,72vw,282px); min-width:0">
+        <div style="display:flex; justify-content:space-between; font-family:'Open Sans',sans-serif; font-size:10px; letter-spacing:0.09em; text-transform:uppercase"><span style="font-size: 12px">Grand Canyon West</span><span style="color: #565449; font-size: 12px">2023</span></div>
+        <div style="height:clamp(280px,40vw,340px); width:100%; min-width:0"><image-slot id="h-2" data-no-lightbox="" shape="rect" placeholder="Grand Canyon West — app"></image-slot></div>
+        <div style="display:flex; flex-direction:column; gap:3px; font-family:'Open Sans',sans-serif; font-size:10px; letter-spacing:0.09em; text-transform:uppercase"><span style="font-size: 12px">Application Design</span><span style="color: #565449; text-transform: none; letter-spacing: 0.02em; font-size: 10px">Hospitality · Art Director</span></div>
+      </a>
+      <a href="cosmos.html" style="scroll-snap-align:start; display:flex; flex-direction:column; gap:10px; flex:0 0 clamp(240px,72vw,282px); min-width:0">
+        <div style="display:flex; justify-content:space-between; font-family:'Open Sans',sans-serif; font-size:10px; letter-spacing:0.09em; text-transform:uppercase"><span style="font-size: 12px">COSMOS</span><span style="color: #565449; font-size: 12px">2021</span></div>
+        <div style="height:clamp(280px,40vw,340px); width:100%; min-width:0"><image-slot id="h-7" data-no-lightbox="" shape="rect" placeholder="Cosmos — event marketing"></image-slot></div>
+        <div style="display:flex; flex-direction:column; gap:3px; font-family:'Open Sans',sans-serif; font-size:10px; letter-spacing:0.09em; text-transform:uppercase"><span style="font-size: 12px">Marketing Campaign<br></span><span style="color: #565449; text-transform: none; letter-spacing: 0.02em; font-size: 10px">Science &amp; Tech · Designer</span></div>
+      </a>
+      <a href="planterra.html" style="scroll-snap-align:start; display:flex; flex-direction:column; gap:10px; flex:0 0 clamp(240px,72vw,282px); min-width:0">
+        <div style="display:flex; justify-content:space-between; font-family:'Open Sans',sans-serif; font-size:10px; letter-spacing:0.09em; text-transform:uppercase"><span style="font-size: 12px">PLANTERRA</span><span style="color: #565449; font-size: 12px">2020-2021</span></div>
+        <div style="height:clamp(280px,40vw,340px); width:100%; min-width:0"><image-slot id="h-5" data-no-lightbox="" shape="rect" placeholder="Planterra — mobile app"></image-slot></div>
+        <div style="display:flex; flex-direction:column; gap:3px; font-family:'Open Sans',sans-serif; font-size:10px; letter-spacing:0.09em; text-transform:uppercase"><span style="font-size: 12px">MOBILE APPLICATION &amp; DESIGN SYSTEM</span><span style="color: #565449; text-transform: none; letter-spacing: 0.02em; font-size: 10px">Consumer Technology · UI Designer UX Researcher</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section id="resume" style="border-top: 1px solid #ECE5D8; padding: clamp(40px,6vw,64px) clamp(20px,4vw,40px); display: flex; flex-wrap: wrap; gap: clamp(20px,4vw,64px); flex-direction: column">
+    <h2 style="margin: 0; flex: 0 0 auto; width: 200px; font-family: Open Sans; font-weight: 700; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #565449">What I do</h2>
+    <div style="flex:1 1 320px; min-width:0; display:flex; flex-direction:column">
+      <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:4px 20px; padding:16px 0; border-bottom:1px solid #ECE5D8"><span style="font-family:'Bodoni Moda',serif; font-size:clamp(24px,3.2vw,34px)">UI/UX Design</span><span style="font-family: Open Sans; font-size: 12px; color: #565449">Design Systems ·&nbsp;Research ·&nbsp; Implimentation</span></div>
+      <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:4px 20px; padding:16px 0; border-bottom:1px solid #ECE5D8"><span style="font-family:'Bodoni Moda',serif; font-size:clamp(24px,3.2vw,34px)">Brand Identity Systems</span><span style="font-family: Open Sans; font-size: 12px; color: #565449">Concept · Audits · Positioning</span></div>
+      <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:4px 20px; padding:16px 0; border-bottom:1px solid #ECE5D8"><span style="font-family:'Bodoni Moda',serif; font-size:clamp(24px,3.2vw,34px)">Packaging &amp; Print</span><span style="font-family: Open Sans; font-size: 12px; color: #565449">Structure · Production · Press</span></div>
+      <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:4px 20px; padding:16px 0"><span style="font-family:'Bodoni Moda',serif; font-size:clamp(24px,3.2vw,34px)">Direction &amp; Research</span><span style="font-family: Open Sans; font-size: 12px; color: #565449">Creative &amp; Art Direction</span></div>
+    </div>
+  </section>
+
+  <footer id="contact" style="background:#11120D; color:#FFFBF4; padding:clamp(48px,8vw,80px) clamp(20px,4vw,40px) 40px; display:flex; flex-direction:column; gap:clamp(36px,6vw,64px)">
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:28px">
+      <h2 style="margin:0; font-family:'Bodoni Moda',serif; font-weight:400; font-size:clamp(34px,5.6vw,64px); line-height:1; letter-spacing:-0.02em">Let's talk<br>about the work.</h2>
+      <a href="contact.html" style="font-family:'Open Sans',sans-serif; font-size:13px; letter-spacing:0.05em; border-bottom:1px solid #414037; padding-bottom:6px; transition:border-color 0.25s ease" style-hover="border-color:#FFFBF4">lmanderson26155@gmail.com</a>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px 24px; font-family:'Open Sans',sans-serif; font-size:10px; letter-spacing:0.09em; text-transform:uppercase; color:#565449">
+      <div style="display:flex; flex-wrap:wrap; gap:22px"><a href="#contact" style-hover="color:#FFFBF4">LinkedIn</a><a href="uploads/LAUREN ANDERSON - Graphic Designer Resume.pdf" target="_blank" rel="noopener" style-hover="color:#FFFBF4">Read.cv</a></div>
+      <span>© 2026 Lauren Anderson</span>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  rail = null;
+  drag = null;
+  renderVals() {
+    return {
+      railRef: (el) => { this.rail = el; },
+      onDown: (e) => {
+        if (!this.rail) return;
+        this.drag = { x: e.clientX, left: this.rail.scrollLeft };
+        this.rail.style.cursor = 'grabbing';
+      },
+      onMove: (e) => {
+        if (!this.drag || !this.rail) return;
+        this.rail.scrollLeft = this.drag.left - (e.clientX - this.drag.x);
+      },
+      onUp: () => {
+        this.drag = null;
+        if (this.rail) this.rail.style.cursor = 'grab';
+      },
+      onWheel: (e) => {
+        if (!this.rail || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+        this.rail.scrollLeft += e.deltaY;
+      },
+    };
+  }
+}
+
+</script>
+</body>
+</html>
