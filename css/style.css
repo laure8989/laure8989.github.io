@@ -23,6 +23,11 @@ img { max-width: 100%; }
 .toggle-panel { display: none; }
 .toggle-panel.is-open { display: block; }
 
+@media (max-width: 720px) {
+  .work-grid { display: flex !important; grid-template-columns: none !important; overflow-x: auto; scroll-snap-type: x mandatory; gap: 16px !important; padding-bottom: 8px; -webkit-overflow-scrolling: touch; }
+  .work-grid > a { flex: 0 0 82%; scroll-snap-align: start; }
+}
+
 @media (prefers-reduced-motion: reduce) { *, #cursor-dot { animation: none !important; transition: none !important; } }
 
 @media (max-width: 640px) {
