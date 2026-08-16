@@ -24,3 +24,8 @@ img { max-width: 100%; }
 .toggle-panel.is-open { display: block; }
 
 @media (prefers-reduced-motion: reduce) { *, #cursor-dot { animation: none !important; transition: none !important; } }
+
+@media (max-width: 640px) {
+  .menu-panel { left: 12px; right: 12px; width: auto; max-width: none; padding-left: clamp(20px,3vw,32px); }
+}
+
