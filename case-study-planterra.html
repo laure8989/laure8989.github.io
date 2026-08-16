@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Planterra — Lauren Anderson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Geist:wght@400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700;1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  body { background: #241F1C; color: #FEF5E6; }
+  a { color: inherit; }
+  a:hover { color: #FE713B; }
+  ::selection { background: #FEF5E6; color: #241F1C; }
+</style>
+</head>
+<body>
+<div style="width:100%; max-width:1440px; margin:0 auto; background:#241F1C; overflow-x:hidden">
+
+  <div id="cursor-dot"></div>
+
+  <a href="#story" style="position:absolute; left:-9999px; top:0; background:#241F1C; color:#FEF5E6; padding:12px 18px; font-family:'Geist',sans-serif; font-size:11px" style-focus="left:12px; top:12px; z-index:20">Skip to the story</a>
+
+  <div style="position:relative; display:flex; justify-content:space-between; align-items:flex-start; padding:clamp(18px,3vw,28px) clamp(20px,4vw,40px); z-index:5">
+    <a href="index.html" style="font-family: 'Geist',sans-serif; font-size: 10px; line-height: 1.5; letter-spacing: 0.04em; text-transform: uppercase; font-weight: 400">PORTFOLIO OF <b>LAUREN ANDERSON</b></a>
+    <div style="position:relative">
+      <button data-menu-toggle="" style="border:none; cursor:pointer; background:#241F1C; color:#FEF5E6; padding:9px 18px; border-radius:20px; font-family:'Geist',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase">Menu</button>
+      <div class="menu-panel">
+        <button data-menu-toggle="" aria-label="Close menu" style="border:none; background:none; cursor:pointer; align-self:flex-end; padding:4px; color:#241F1C; transform:rotate(0deg); transition:transform 0.3s ease" style-hover="transform:rotate(90deg)">
+          <svg width="22" height="22" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><line x1="4" y1="4" x2="20" y2="20"></line><line x1="20" y1="4" x2="4" y2="20"></line></svg>
+        </button>
+        <nav style="display:flex; flex-direction:column; align-items:flex-end; gap:2px; margin-top:clamp(20px,3vw,32px)">
+          <a href="index.html" style="display:inline-block; font-family:'Anton',sans-serif; font-weight:400; text-transform:uppercase; font-size:clamp(30px,4.2vw,44px); line-height:1.1; transform:rotate(0deg); transition:transform 0.25s ease, color 0.25s ease; color:#241F1C" style-hover="color:#FE713B; transform:rotate(-4deg)">Home</a>
+          <a href="index.html#about" style="display:inline-block; font-family:'Anton',sans-serif; font-weight:400; text-transform:uppercase; font-size:clamp(30px,4.2vw,44px); line-height:1.1; transform:rotate(0deg); transition:transform 0.25s ease, color 0.25s ease; color:#241F1C" style-hover="color:#FE713B; transform:rotate(-4deg)">About</a>
+          <a href="assets/documents/lauren-anderson-resume.pdf" target="_blank" rel="noopener" style="display:inline-block; font-family:'Anton',sans-serif; font-weight:400; text-transform:uppercase; font-size:clamp(30px,4.2vw,44px); line-height:1.1; transform:rotate(0deg); transition:transform 0.25s ease, color 0.25s ease; color:#241F1C" style-hover="color:#FE713B; transform:rotate(-4deg)">Resume</a>
+        </nav>
+        <a href="index.html#contact" style="display:inline-block; align-self:flex-end; font-family:'Anton',sans-serif; font-weight:400; text-transform:uppercase; font-size:clamp(30px,4.2vw,44px); line-height:1.1; transform:rotate(0deg); transition:transform 0.25s ease, color 0.25s ease; color:#241F1C" style-hover="color:#FE713B; transform:rotate(-4deg)">Contact</a><a href="index.html#work" style="display:inline-block; align-self:flex-end; font-family:'Anton',sans-serif; font-weight:400; text-transform:uppercase; font-size:clamp(30px,4.2vw,44px); line-height:1.1; transform:rotate(0deg); transition:transform 0.25s ease, color 0.25s ease; color:#241F1C" style-hover="color:#FE713B; transform:rotate(-4deg)">Work</a>
+        <div style="margin-top:clamp(24px,4vw,40px); padding-top:16px; border-top:1px solid #ECE0C4; display:flex; flex-wrap:wrap; justify-content:flex-end; gap:20px">
+          <a href="#contact" style="display:inline-flex; align-items:center; gap:4px; font-family:'Geist',sans-serif; font-size:12px; font-weight:400; letter-spacing:0.06em; text-transform:uppercase; color:#241F1C" style-hover="font-weight:600">LinkedIn ↗</a>
+          <a href="assets/documents/lauren-anderson-resume.pdf" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:4px; font-family:'Geist',sans-serif; font-size:12px; font-weight:400; letter-spacing:0.06em; text-transform:uppercase; color:#241F1C" style-hover="font-weight:600">Read.cv ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header style="position:relative; margin-top:-90px; padding:clamp(80px,14vw,180px) clamp(20px,4vw,40px) clamp(56px,8vw,88px); text-align:center; animation:fadeUp 0.7s ease both; overflow:hidden; height:350px; padding-top:clamp(100px,14vw,180px)">
+    <div style="position:absolute; inset:0; z-index:0"><div style="width: 100%; height: 100%; opacity: 0.6; background: url(&quot;https://i.postimg.cc/3JZmwf4p/Phone-Mock-3.jpg&quot;) center / cover no-repeat"></div></div>
+    <div style="position:absolute; inset:0; z-index:1; background:linear-gradient(180deg, rgba(36,31,28,0.55), rgba(36,31,28,0.35), #241F1C 100%)"></div>
+    <div style="position:relative; z-index:2">
+      <span style="display:block; margin-bottom:clamp(16px,2.4vw,24px); font-family:'Geist',sans-serif; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#FEF5E6">Case Study 05 — Mobile Application &amp; Design System</span>
+      <h1 style="margin:0 auto; max-width:16ch; font-family:'Anton',sans-serif; font-weight:400; text-transform:uppercase; font-size:clamp(52px,10vw,160px); line-height:0.86; letter-spacing:-0.01em; text-wrap:balance; color:#FEF5E6">Planterra</h1>
+    </div>
+  </header>
+
+  <div style="max-width:760px; margin:0 auto; padding:0 clamp(20px,4vw,40px) clamp(48px,7vw,80px); text-align:center">
+    <p class="reveal" style="margin:0; font-size:14px; line-height:1.5; color:#9C9284; text-wrap:pretty">Planterra is a mobile app concept designed to help plant owners care for their collections with confidence while connecting plant lovers in a supportive community. Built as my senior capstone project, this app blends guided plant care, reminders, and social sharing into a calm, intuitive interface meant for users of all experience levels.</p>
+    <a href="#solution" style="display:inline-flex; margin-top:clamp(24px,3vw,32px); background:#FEF5E6; color:#241F1C; padding:14px 26px; font-family:'Geist',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; border-radius:999px; font-weight:600; transition:background 0.25s ease" style-hover="background:#E4E468">View final product ↓</a>
+  </div>
+
+  <dl style="margin:0; max-width:900px; margin-left:auto; margin-right:auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(150px,1fr)); gap:24px clamp(20px,3vw,40px); padding:clamp(20px,3vw,28px) clamp(20px,4vw,40px); border-top:1px solid rgba(254,245,230,0.14); border-bottom:1px solid rgba(254,245,230,0.14); font-family:'Geist',sans-serif; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:#9C9284">
+    <div class="reveal" style="display:flex; flex-direction:column; gap:7px"><dt>Client</dt><dd style="margin:0; color:#FEF5E6">Planterra</dd></div>
+    <div class="reveal" style="display:flex; flex-direction:column; gap:7px"><dt>Industry</dt><dd style="margin:0; color:#FEF5E6">Consumer Technology</dd></div>
+    <div class="reveal" style="display:flex; flex-direction:column; gap:7px"><dt>Role</dt><dd style="margin:0; color:#FEF5E6">UI Designer &amp; UX Researcher</dd></div>
+    <div class="reveal" style="display:flex; flex-direction:column; gap:7px"><dt>Timeline</dt><dd style="margin:0; color:#FEF5E6">2020–2021</dd></div>
+  </dl>
+
+  <div style="max-width: 900px; margin: 0 auto; padding: 0 clamp(20px,4vw,40px) clamp(56px,8vw,88px); padding-top: 40px; padding-bottom: 0px">
+    <div style="height:clamp(240px,44vw,620px); width:100%; position:relative; overflow:hidden"><iframe src="https://www.youtube.com/embed/b3mYKwy6smk?si=MtZXdHiCRBCneS8_&amp;autoplay=1&amp;mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="true" style="position:absolute; inset:0; width:100%; height:100%; border:none"></iframe></div>
+  </div>
+
+  <section id="story" style="padding:clamp(56px,9vw,110px) clamp(20px,4vw,40px) clamp(40px,6vw,72px); display:flex; flex-direction:column; gap:clamp(20px,3vw,28px); max-width:900px; margin:0 auto">
+    <h2 class="reveal" style="margin:0; font-family:'Anton',sans-serif; font-weight:400; font-size:clamp(34px,5.4vw,60px); letter-spacing:-0.01em; text-transform:uppercase; color:#FEF5E6; line-height:0.98; max-width:14ch">The Problem</h2>
+    <p class="reveal" style="margin:0; font-size:14px; line-height:1.5; color:#9C9284; text-wrap:pretty; width:100%">New plant owners often lack the knowledge and confidence to care for their plants, leading to confusion, inconsistent routines, and unhealthy plants.</p>
+  </section>
+
+  <section style="padding:clamp(40px,6vw,72px) clamp(20px,4vw,40px); display:flex; flex-direction:column; gap:clamp(28px,4vw,40px); max-width:900px; margin:0 auto">
+    <h2 class="reveal" style="margin:0; font-family:'Anton',sans-serif; font-weight:400; font-size:clamp(34px,5.4vw,60px); letter-spacing:-0.01em; text-transform:uppercase; color:#FEF5E6; line-height:0.98; max-width:14ch">Background &amp; Goals</h2>
+    <p class="reveal" style="margin:0; font-size:14px; line-height:1.5; color:#9C9284; text-wrap:pretty; width:100%">This personal project was inspired by the surge in houseplant ownership during the pandemic. As more people brought nature indoors, I noticed many first-time plant owners struggled to keep their plants healthy. As an avid gardener, I wanted to explore why this was happening and how design could help make plant care more approachable.</p>
+    <ol style="margin:0; padding:0; list-style:none; display:flex; flex-direction:column">
+      <li class="reveal" style="display:flex; gap:clamp(16px,3vw,32px); align-items:baseline; padding:18px 0; border-top:1px solid rgba(254,245,230,0.14)"><span style="flex:0 0 auto; font-family:'Geist',sans-serif; font-size:10px; color:#9C9284">01</span><span style="font-family:'Playfair Display',serif; font-size:clamp(19px,2.4vw,26px); line-height:1.25">Create an intuitive, user-centered experience that makes key tasks simple, efficient, and enjoyable.</span></li>
+      <li class="reveal" style="display:flex; gap:clamp(16px,3vw,32px); align-items:baseline; padding:18px 0; border-top:1px solid rgba(254,245,230,0.14)"><span style="flex:0 0 auto; font-family:'Geist',sans-serif; font-size:10px; color:#9C9284">02</span><span style="font-family:'Playfair Display',serif; font-size:clamp(19px,2.4vw,26px); line-height:1.25">Develop a scalable design system that ensures consistency across the product and supports future growth.</span></li>
+      <li class="reveal" style="display:flex; gap:clamp(16px,3vw,32px); align-items:baseline; padding:18px 0; border-top:1px solid rgba(254,245,230,0.14); border-bottom:1px solid rgba(254,245,230,0.14)"><span style="flex:0 0 auto; font-family:'Geist',sans-serif; font-size:10px; color:#9C9284">03</span><span style="font-family:'Playfair Display',serif; font-size:clamp(19px,2.4vw,26px); line-height:1.25">Design a complete mobile app experience from research and strategy through final UI and prototyping.</span></li>
+    </ol>
+  </section>
+
+  <section aria-label="Research and strategy" style="padding:clamp(40px,6vw,72px) clamp(20px,4vw,40px); display:flex; flex-direction:column; gap:22px; max-width:900px; margin:0 auto">
+    <h2 class="reveal" style="margin:0; font-family:'Anton',sans-serif; font-weight:400; font-size:clamp(34px,5.4vw,60px); letter-spacing:-0.01em; text-transform:uppercase; color:#FEF5E6; line-height:0.98; max-width:16ch">Research &amp; Strategy</h2>
+    <p class="reveal" style="margin:0; font-size:14px; line-height:1.5; color:#9C9284; text-wrap:pretty; width:100%">Before beginning the design process, I spent 3–5 months researching houseplants, their owners, the plant industry, and potential users. This research uncovered why people were struggling and gave me the insights needed to design meaningful solutions. From there, I tested my proposed ideas through in-person research, including card sorting and user surveys. Whenever a solution missed the mark, I held in-depth conversations to uncover what I was overlooking, then refined and retested until it fit the needs of the user.</p>
+
+    <div style="border-top:1px solid rgba(254,245,230,0.14)">
+      <button type="button" data-toggle-target="pl-research-1" aria-expanded="false" style="width:100%; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:18px 0; background:none; border:none; cursor:pointer; text-align:left; font-family:'Playfair Display',serif; font-size:clamp(18px,2.2vw,22px); color:#FEF5E6">
+        <span>Market Research</span>
+        <span aria-hidden="true" data-toggle-symbol="" style="font-family:'Geist',sans-serif; font-size:18px; color:#9C9284; flex:0 0 auto">+</span>
+      </button>
+      <div id="pl-research-1" class="toggle-panel">
+        <p class="reveal" style="margin:0 0 20px; font-size:14px; line-height:1.65; color:#9C9284; text-wrap:pretty"><b>COMPETITOR ANALYSIS</b><br>Doing competitive research allowed me to gain insights into the Plant Care industry and determine strengths and weaknesses of competitors. By doing this research I saw a lack of personal connection in the user experience. At this step, I determined what features would set me apart from others while giving an effective experience.</p>
+        <div style="display:grid; gap:20px; margin-bottom:20px">
+          <figure style="margin:0; display:flex; flex-direction:column; gap:10px"><div class="reveal" style="height:332px"><div style="background: url(&quot;https://i.postimg.cc/9Qh4ydTW/Frame-4.png&quot;) center / cover no-repeat"></div></div></figure>
+        </div>
+        <p class="reveal" style="margin:0 0 20px; font-size:14px; line-height:1.65; color:#9C9284; text-wrap:pretty"><b>RESULTS</b><br>The results of the market research showed the type of people who were struggling to take care of plants and the problems they were experiencing. Once the market is established then I did some research into competitors who were currently addressing those problems and what they could possibly be missing.</p>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(254,245,230,0.14)">
+      <button type="button" data-toggle-target="pl-research-2" aria-expanded="false" style="width:100%; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:18px 0; background:none; border:none; cursor:pointer; text-align:left; font-family:'Playfair Display',serif; font-size:clamp(18px,2.2vw,22px); color:#FEF5E6">
+        <span>User Research</span>
+        <span aria-hidden="true" data-toggle-symbol="" style="font-family:'Geist',sans-serif; font-size:18px; color:#9C9284; flex:0 0 auto">+</span>
+      </button>
+      <div id="pl-research-2" class="toggle-panel">
+        <p class="reveal" style="margin:0 0 20px; font-size:14px; line-height:1.65; color:#9C9284; text-wrap:pretty"><b>USER RESEARCH</b><br>The user survey was a questionnaire distributed to over 100 individuals. The questions were carefully developed by backtracking from what I truly wanted to understand—how users interact with plant care, what influences their purchasing decisions, and what they need to care for plants successfully. The insights gathered from this research were instrumental in shaping tools that enhance the overall user experience.</p>
+        <div style="margin:0 0 20px; font-size:14px; line-height:1.65; color:#9C9284; text-wrap:pretty"><b>RESULTS</b><br><ul><li>The majority of the respondents found the most difficult part of growing/owning a plant to be the wilting and bugs. This leads me to believe they have more of a problem with maintenance rather than remembering when to water their plants.</li><li>A large percentage of indoor gardeners also tend to gain a lot of their information from the internet. This can be a daunting task when you need a quick answer on what is happening to your plant.</li><li>Many also found they obtained their plants out of serendipity and not by choice, this was because they were highly intimidated by the challenge of growing a plant.</li></ul></div>
+        <p class="reveal" style="margin:0 0 20px; font-size:14px; line-height:1.65; color:#9C9284; text-wrap:pretty"><b>CARD SORTING</b><br>Card sorting helps the analysis phase of UI/UX design by revealing how users naturally group and label information, allowing designers to create a more intuitive structure and navigation system that aligns with user expectations.</p>
+        <div style="display:grid; gap:20px; margin-bottom:20px">
+          <figure style="margin:0; display:flex; flex-direction:column; gap:10px"><div class="reveal" style="height:484px"><div style="background: url(&quot;https://i.postimg.cc/MKXfWZS9/GS-Portfolio-3-20.png&quot;) center / cover no-repeat"></div></div></figure>
+        </div>
+        <p class="reveal" style="margin:0 0 20px; font-size:14px; line-height:1.65; color:#9C9284; text-wrap:pretty"><b>EMPATHY MAPPING</b><br>Empathy mapping gave me vital information about the concerns, questions, feelings, and overall enjoyment people would experience towards the subject of plant care. Being able to talk and experience others emotional connection with plant care, whether good or bad, allowed me to visualize what areas of plant care to target.</p>
+        <div style="display:grid; gap:20px; margin-bottom:20px">
+          <figure style="margin:0; display:flex; flex-direction:column; gap:10px"><div class="reveal" style="height:clamp(200px,26vw,320px)"><div style="background: url(&quot;https://i.postimg.cc/Kzytz6Nt/GS-Portfolio-16.png&quot;) center / cover no-repeat"></div></div></figure>
+        </div>
+        <p class="reveal" style="margin:0 0 20px; font-size:14px; line-height:1.65; color:#9C9284; text-wrap:pretty"><b>PERSONAS</b><br>User personas are shaped from all the previous research methods and answers. These personas are more acute than the provisionals and allowed me to determine more information of the motivations and needs of the users. Personas provided crucial insight into what type of person will be using my app and how I can aid them in accomplishing their goals.</p>
+        <div style="display:grid; gap:20px; margin-bottom:20px">
+          <figure style="margin:0; display:flex; flex-direction:column; gap:10px"><div class="reveal" style="height:402px"><div style="background: url(&quot;https://i.postimg.cc/jS0xGRdy/Personas.png&quot;) center / cover no-repeat"></div></div></figure>
+        </div>
+        <p class="reveal" style="margin:0 0 20px; font-size:14px; line-height:1.65; color:#9C9284; text-wrap:pretty"><b>PRODUCT ROADMAPPING</b><br>Created detailed product maps to visualize features, workflows, and interactions, ensuring a cohesive design that aligns with both user needs and business goals.</p>
+        <p class="reveal" style="margin:0; font-size:14px; line-height:1.65; color:#9C9284; text-wrap:pretty"><b>USER JOURNEY</b><br>Mapped the end-to-end user journey to identify pain points, highlight key touch points, and uncover opportunities for a smoother, more engaging experience.</p>
+      </div>
+    </div>
+
+    <blockquote style="margin:clamp(12px,2vw,20px) 0 0; border-left:1px solid #FEF5E6; padding:6px 0 6px clamp(20px,3vw,32px)">
+      <p class="reveal" style="margin:0; max-width:36ch; font-family:'Playfair Display',serif; font-style:italic; font-size:clamp(20px,2.8vw,30px); line-height:1.3">Designing without understanding users risks creating a product no one wants or can use.</p>
+    </blockquote>
+  </section>
+
+  <section aria-label="Process" style="padding:clamp(40px,6vw,72px) clamp(20px,4vw,40px); display:flex; flex-direction:column; gap:8px; max-width:900px; margin:0 auto">
+    <h2 class="reveal" style="margin:0 0 clamp(20px,3vw,28px); font-family:'Anton',sans-serif; font-weight:400; font-size:clamp(34px,5.4vw,60px); letter-spacing:-0.01em; text-transform:uppercase; color:#FEF5E6; line-height:0.98">Process</h2>
+    <p class="reveal" style="margin:0 0 8px; font-size:14px; line-height:1.5; color:#9C9284; text-wrap:pretty; width:100%">After compiling the research, my solution was Planterra. This is an application that would solve the problem of people killing their houseplants while also providing a helpful and friendly community of plant people. The main functions of the application are the plant identification (camera authenticator), library (guide of all plants with helpful information), doctor (for houseplant diseases and on-demand help), as well as a community of other plant lovers whom you would be able to connect with to trade, view their shelf, and get helpful information.</p>
+    <div class="reveal" style="display:flex; gap:clamp(16px,3vw,32px); padding:22px 0; border-top:1px solid rgba(254,245,230,0.14)">
+      <span style="flex:0 0 auto; width:64px; font-family:'Geist',sans-serif; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:#9C9284">01</span>
+      <div style="flex:1 1 auto; min-width:0; display:flex; flex-direction:column; gap:8px"><span style="font-family:'Playfair Display',serif; font-size:clamp(20px,2.4vw,28px); line-height:1.2">Product Roadmap</span><p class="reveal" style="margin:0; max-width:60ch; font-size:14px; line-height:1.65; color:#9C9284; text-wrap:pretty">I identify the features that matter most, remove unnecessary complexity, and prioritize functionality to create a more purposeful user experience.</p></div>
+    </div>
+    <div class="reveal" style="display:flex; gap:clamp(16px,3vw,32px); padding:22px 0; border-top:1px solid rgba(254,245,230,0.14)">
+      <span style="flex:0 0 auto; width:64px; font-family:'Geist',sans-serif; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:#9C9284">02</span>
+      <div style="flex:1 1 auto; min-width:0; display:flex; flex-direction:column; gap:8px"><span style="font-family:'Playfair Display',serif; font-size:clamp(20px,2.4vw,28px); line-height:1.2">Sitemap</span><p class="reveal" style="margin:0; max-width:60ch; font-size:14px; line-height:1.65; color:#9C9284; text-wrap:pretty">Research is translated into a clear user experience through site maps, user flows, and wireframes. This process organizes content, reduces friction, and creates an intuitive path for users.</p></div>
+    </div>
+    <div class="reveal" style="display:flex; gap:clamp(16px,3vw,32px); padding:22px 0; border-top:1px solid rgba(254,245,230,0.14)">
+      <span style="flex:0 0 auto; width:64px; font-family:'Geist',sans-serif; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:#9C9284">03</span>
+      <div style="flex:1 1 auto; min-width:0; display:flex; flex-direction:column; gap:8px"><span style="font-family:'Playfair Display',serif; font-size:clamp(20px,2.4vw,28px); line-height:1.2">Wireframe</span><p class="reveal" style="margin:0; max-width:60ch; font-size:14px; line-height:1.65; color:#9C9284; text-wrap:pretty">This is where the experience begins to take shape. Wireframes define layout, hierarchy, and user flow, while early interaction patterns help reduce friction and create a more intuitive experience.</p></div>
+    </div>
+    <div class="reveal" style="display:flex; gap:clamp(16px,3vw,32px); padding:22px 0; border-top:1px solid rgba(254,245,230,0.14); border-bottom:1px solid rgba(254,245,230,0.14)">
+      <span style="flex:0 0 auto; width:64px; font-family:'Geist',sans-serif; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:#9C9284">04</span>
+      <div style="flex:1 1 auto; min-width:0; display:flex; flex-direction:column; gap:8px"><span style="font-family:'Playfair Display',serif; font-size:clamp(20px,2.4vw,28px); line-height:1.2">Design System</span><p class="reveal" style="margin:0; max-width:60ch; font-size:14px; line-height:1.65; color:#9C9284; text-wrap:pretty">I establish a design system that unifies typography, color, spacing, and reusable components, ensuring a consistent and efficient experience across every screen.</p></div>
+    </div>
+
+    <button type="button" data-toggle-target="pl-detail" data-open-label="Hide process photos —" data-closed-label="See process photos +" aria-expanded="false" style="align-self:flex-start; margin-top:24px; background:none; border:1px solid #FEF5E6; color:#FEF5E6; padding:14px 24px; font-family:'Geist',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; cursor:pointer; transition:background 0.25s ease, color 0.25s ease; border-radius:999px; font-weight:600"><span data-toggle-label>See process photos +</span></button>
+
+    <div id="pl-detail" class="toggle-panel">
+      <div style="margin-top:clamp(28px,4vw,40px); display:flex; flex-direction:column; gap:14px; animation:fadeUp 0.5s ease both">
+        <h3 style="margin:0; font-family:'Geist',sans-serif; font-weight:400; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#9C9284">Process photos</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 2px">
+          <figure style="margin:0; display:flex; flex-direction:column; gap:10px"><div class="reveal" style="height:clamp(200px,26vw,320px)"><div style=""></div></div><figcaption style="font-family:'Geist',sans-serif; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:#9C9284">PRODUCT ROADMAP</figcaption></figure>
+          <figure style="margin:0; display:flex; flex-direction:column; gap:10px"><div class="reveal" style="height:clamp(200px,26vw,320px)"><div style=""></div></div><figcaption style="font-family:'Geist',sans-serif; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:#9C9284">SITEMAP</figcaption></figure>
+          <figure style="margin:0; display:flex; flex-direction:column; gap:10px"><div class="reveal" style="height:clamp(200px,26vw,320px)"><div style=""></div></div><figcaption style="font-family:'Geist',sans-serif; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:#9C9284">WIREFRAMES</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="solution" aria-label="Final solution" style="padding: clamp(40px,6vw,72px) clamp(20px,4vw,40px); display: flex; flex-direction: column; margin: 0 auto; max-width: 900px; gap: 2px">
+    <h2 class="reveal" style="margin:0; font-family:'Anton',sans-serif; font-weight:400; font-size:clamp(34px,5.4vw,60px); letter-spacing:-0.01em; text-transform:uppercase; color:#FEF5E6; line-height:0.98; margin-bottom:32px">The Solution</h2>
+    <div style="height:clamp(240px,42vw,600px); width:100%; position:relative; overflow:hidden"><iframe src="https://www.youtube.com/embed/u7Oy-HH5BHU?si=zyHy5dW4PZG34eUO&amp;autoplay=1&amp;mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="true" style="position:absolute; inset:0; width:100%; height:100%; border:none"></iframe></div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); width: 100%; gap: 2px">
+      <div class="reveal" style="height:clamp(220px,28vw,360px)"><div style=""></div></div>
+      <div class="reveal" style="height:clamp(220px,28vw,360px)"><div style=""></div></div>
+      <div class="reveal" style="height:clamp(220px,28vw,360px)"><div style=""></div></div>
+    </div>
+  </section>
+
+  <section aria-label="Key takeaways" style="padding:clamp(56px,8vw,88px) clamp(20px,4vw,40px); max-width:900px; margin:0 auto">
+    <h2 class="reveal" style="margin:0 0 clamp(28px,4vw,40px); font-family:'Anton',sans-serif; font-weight:400; font-size:clamp(34px,5.4vw,60px); letter-spacing:-0.01em; text-transform:uppercase; color:#FEF5E6; line-height:0.98">Key Takeaways</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:clamp(24px,3vw,40px)">
+      <div class="reveal" style="display:flex; flex-direction:column; gap:10px"><span style="font-family:'Playfair Display',serif; font-style:italic; font-weight:700; font-size:24px; color:#FEF5E6">01</span><p class="reveal" style="margin:0; font-size:14px; line-height:1.65; color:#9C9284; text-wrap:pretty">Placeholder takeaway — a lesson that shows how you think.</p></div>
+      <div class="reveal" style="display:flex; flex-direction:column; gap:10px"><span style="font-family:'Playfair Display',serif; font-style:italic; font-weight:700; font-size:24px; color:#FEF5E6">02</span><p class="reveal" style="margin:0; font-size:14px; line-height:1.65; color:#9C9284; text-wrap:pretty">Placeholder takeaway — something you would do differently.</p></div>
+      <div class="reveal" style="display:flex; flex-direction:column; gap:10px"><span style="font-family:'Playfair Display',serif; font-style:italic; font-weight:700; font-size:24px; color:#FEF5E6">03</span><p class="reveal" style="margin:0; font-size:14px; line-height:1.65; color:#9C9284; text-wrap:pretty">Placeholder takeaway — what you carried into the next project.</p></div>
+    </div>
+  </section>
+
+  <nav aria-label="Next project" style="border-top:1px solid rgba(254,245,230,0.14)">
+    <a href="case-study-visit-bellevue.html" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px; padding:clamp(36px,5vw,64px) clamp(20px,4vw,40px); transition:background 0.3s ease" style-hover="background:#3A332C">
+      <div style="display:flex; flex-direction:column; gap:12px; min-width:0">
+        <span style="font-family:'Geist',sans-serif; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#9C9284">Next project — Publication Design</span>
+        <span style="font-family:'Playfair Display',serif; font-size:clamp(30px,5vw,58px); line-height:1; letter-spacing:-0.02em">Visit Bellevue</span>
+      </div>
+      <span aria-hidden="true" style="font-family:'Playfair Display',serif; font-size:clamp(30px,5vw,58px); line-height:1">⟶</span>
+    </a>
+  </nav>
+
+  <a href="index.html#work" style="display:block; overflow:hidden; padding:clamp(16px,2.4vw,24px) 0">
+    <div style="display:inline-flex; align-items:center; animation:marqueeScroll 22s linear infinite">
+      <span style="display:inline-flex; align-items:center; gap:clamp(20px,3vw,40px); padding:0 clamp(20px,3vw,40px); font-family:'Playfair Display',serif; font-style:italic; font-weight:700; font-size:clamp(40px,8vw,110px); white-space:nowrap">contact<span style="color:#FE713B; font-family:sans-serif; font-style:normal; font-size:0.4em">●</span></span>
+      <span style="display:inline-flex; align-items:center; gap:clamp(20px,3vw,40px); padding:0 clamp(20px,3vw,40px); font-family:'Playfair Display',serif; font-style:italic; font-weight:700; font-size:clamp(40px,8vw,110px); white-space:nowrap">contact<span style="color:#FE713B; font-family:sans-serif; font-style:normal; font-size:0.4em">●</span></span>
+    </div>
+  </a>
+
+  <footer id="contact" style="background:#241F1C; color:#FEF5E6; padding:clamp(48px,8vw,80px) clamp(20px,4vw,40px) clamp(24px,3vw,32px); display:flex; flex-direction:column; gap:clamp(32px,5vw,48px)">
+    <div style="text-align:center; font-family:'Anton',sans-serif; font-weight:400; text-transform:uppercase; font-size:clamp(38px,9vw,110px); line-height:0.95">Feel like<br>collaborating?</div>
+    <div style="display:flex; flex-direction:column; align-items:center; gap:0px">
+      <span style="font-family:'Geist',sans-serif; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#9C9284">Contact me</span>
+      <a href="mailto:lmanderson26155@gmail.com" style="font-family:'Playfair Display',serif; font-style:italic; font-weight:700; font-size:clamp(22px,4vw,42px); transition:color 0.25s ease" style-hover="color:#E4E468">lmanderson26155@gmail.com</a>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px 24px; padding-top:clamp(20px,3vw,28px); border-top:1px solid rgba(254,245,230,0.14); font-family:'Geist',sans-serif; font-size:10px; letter-spacing:0.09em; text-transform:uppercase; color:#9C9284">
+      <div style="display:flex; flex-wrap:wrap; gap:22px"><a href="#contact" style-hover="color:#E4E468">LinkedIn</a><a href="assets/documents/lauren-anderson-resume.pdf" target="_blank" rel="noopener" style-hover="color:#E4E468">Read.cv</a></div>
+      <span>© 2026 Lauren Anderson</span>
+    </div>
+  </footer>
+</div>
+
+<script src="js/site.js" defer></script>
+</body>
+</html>
