@@ -1,3 +1,4 @@
+html { scroll-behavior: smooth; }
 body { margin: 0; font-family: 'Geist', 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 a { text-decoration: none; }
 img { max-width: 100%; }
@@ -26,6 +27,7 @@ img { max-width: 100%; }
 @media (max-width: 720px) {
   .work-grid { display: flex !important; grid-template-columns: none !important; overflow-x: auto; scroll-snap-type: x mandatory; gap: 16px !important; padding-bottom: 8px; -webkit-overflow-scrolling: touch; }
   .work-grid > a { flex: 0 0 82%; scroll-snap-align: start; }
+  .work-card img, .work-card image-slot, .work-card [data-reveal-idx] > image-slot { height: 220px !important; }
 }
 
 @media (prefers-reduced-motion: reduce) { *, #cursor-dot { animation: none !important; transition: none !important; } }

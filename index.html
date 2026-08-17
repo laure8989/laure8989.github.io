@@ -13,6 +13,15 @@
   a { color: inherit; }
   a:hover { color: inherit; }
   ::selection { background: #241F1C; color: #FEF5E6; }
+  .hero-portrait { display: none !important; }
+  @media (max-width: 720px) {
+    #top { padding-bottom: clamp(24px,5vw,40px) !important; }
+    .hero-italic { font-size: 32px !important; }
+    .hero-headline-big { font-size: clamp(56px,17vw,90px) !important; }
+    #top { display: flex; flex-direction: column; }
+    .hero-services { order: 1; }
+    .hero-headline { order: 2; }
+  }
 </style>
 </head>
 <body>
@@ -52,22 +61,22 @@
   </div>
 
   <header id="top" style="position: relative; padding: clamp(24px,4vw,40px) clamp(20px,4vw,40px) clamp(48px,7vw,84px); animation: fadeUp 0.7s ease both; padding-bottom: 116px">
-    <div style="position: absolute; right: clamp(-40px,2vw,40px); width: clamp(220px,32vw,430px); height: clamp(220px,32vw,430px); z-index: 0">
+    <div class="hero-portrait" style="position: absolute; right: clamp(-40px,2vw,40px); width: clamp(220px,32vw,430px); height: clamp(220px,32vw,430px); z-index: 0">
       <div style="position:absolute; inset:0; border-radius:50%; overflow:hidden; border:1px solid rgba(36,31,28,0.16)"><div style="width:100%; height:100%; background:url(https://i.postimg.cc/Zn9fQ9nR/Artboard-1.png) center / cover no-repeat"></div></div>
-      <img src="assets/images/group-18.png" alt="" style="position:absolute; top:-3%; right:4%; width:38%; height:auto; z-index:2; transform:rotate(12deg)"><img src="assets/images/group-16.png" alt="" style="position: absolute; left: 3px; width: 121px; height: 122px; z-index: 2; transform: rotate(-10deg); top: 223px">
+      <img src="assets/images/group-18.png" alt="" style="position:absolute; top:-3%; right:4%; width:38%; height:auto; z-index:2; transform:rotate(12deg)"><img src="assets/images/group-16.png" alt="" style="position: absolute; left: 3px; width: 38%; height: auto; z-index: 2; transform: rotate(-10deg); top: 223px">
     </div>
 
-    <div style="max-width:300px; margin-right:auto; text-align:left; font-family:'Geist',sans-serif; color:#6E655C; position:relative; z-index:1; margin-bottom:clamp(28px,5vw,56px)">
+    <div class="hero-services" style="max-width:300px; margin-right:auto; text-align:left; font-family:'Geist',sans-serif; color:#6E655C; position:relative; z-index:1; margin-bottom:clamp(28px,5vw,56px)">
       <div style="font-size:10px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:#241F1C; margin-bottom:6px">SERVICES:</div>
       <div style="font-size:11px; line-height:1.6; letter-spacing:0.02em">UI/UX Design. Brand Identity Systems. Packaging &amp; Print. Direction &amp; Research.</div>
     </div>
 
-    <div style="position:relative; z-index:1">
+    <div class="hero-headline" style="position:relative; z-index:1">
       <div style="display:flex; flex-wrap:wrap; align-items:baseline; gap:clamp(10px,2vw,20px)">
         
-        <span style="font-family: 'Playfair Display',serif; font-style: italic; line-height: 0.85; animation: kineticIn 0.7s ease both; animation-delay: 0.2s; font-size: 60px; font-weight: 900">UI/Ux &amp; branding</span>
+        <span class="hero-italic" style="font-family: 'Playfair Display',serif; font-style: italic; line-height: 0.85; animation: kineticIn 0.7s ease both; animation-delay: 0.2s; font-size: 60px; font-weight: 900">UI/Ux &amp; branding</span>
       </div>
-      <div style="font-family:'Anton',sans-serif; font-weight:400; text-transform:uppercase; font-size:clamp(64px,14vw,168px); line-height:0.85; letter-spacing:-0.01em; margin-top:clamp(4px,1vw,10px); animation:kineticIn 0.8s ease both; animation-delay:0.3s"><span style="display:inline-block; overflow:hidden; position:relative; vertical-align:top"><span style="visibility:hidden">D</span><span data-swipe-row style="position:absolute; left:0; top:0; display:flex; transform:translateX(-50%)"><span>D</span><span>D</span></span></span><span style="display:inline-block; overflow:hidden; position:relative; vertical-align:top"><span style="visibility:hidden">e</span><span data-swipe-row style="position:absolute; left:0; top:0; display:flex; transform:translateX(-50%)"><span>e</span><span>e</span></span></span><span style="display:inline-block; overflow:hidden; position:relative; vertical-align:top"><span style="visibility:hidden">s</span><span data-swipe-row style="position:absolute; left:0; top:0; display:flex; transform:translateX(-50%)"><span>s</span><span>s</span></span></span><span style="display:inline-block; overflow:hidden; position:relative; vertical-align:top"><span style="visibility:hidden">i</span><span data-swipe-row style="position:absolute; left:0; top:0; display:flex; transform:translateX(-50%)"><span>i</span><span>i</span></span></span><span style="display:inline-block; overflow:hidden; position:relative; vertical-align:top"><span style="visibility:hidden">g</span><span data-swipe-row style="position:absolute; left:0; top:0; display:flex; transform:translateX(-50%)"><span>g</span><span>g</span></span></span><span style="display:inline-block; overflow:hidden; position:relative; vertical-align:top"><span style="visibility:hidden">n</span><span data-swipe-row style="position:absolute; left:0; top:0; display:flex; transform:translateX(-50%)"><span>n</span><span>n</span></span></span><span style="display:inline-block; overflow:hidden; position:relative; vertical-align:top"><span style="visibility:hidden">e</span><span data-swipe-row style="position:absolute; left:0; top:0; display:flex; transform:translateX(-50%)"><span>e</span><span>e</span></span></span><span style="display:inline-block; overflow:hidden; position:relative; vertical-align:top"><span style="visibility:hidden">r</span><span data-swipe-row style="position:absolute; left:0; top:0; display:flex; transform:translateX(-50%)"><span>r</span><span>r</span></span></span></div>
+      <div class="hero-headline-big" style="font-family:'Anton',sans-serif; font-weight:400; text-transform:uppercase; font-size:clamp(64px,14vw,168px); line-height:0.85; letter-spacing:-0.01em; margin-top:clamp(4px,1vw,10px); animation:kineticIn 0.8s ease both; animation-delay:0.3s"><span style="display:inline-block; overflow:hidden; position:relative; vertical-align:top"><span style="visibility:hidden">D</span><span data-swipe-row style="position:absolute; left:0; top:0; display:flex; transform:translateX(-50%)"><span>D</span><span>D</span></span></span><span style="display:inline-block; overflow:hidden; position:relative; vertical-align:top"><span style="visibility:hidden">e</span><span data-swipe-row style="position:absolute; left:0; top:0; display:flex; transform:translateX(-50%)"><span>e</span><span>e</span></span></span><span style="display:inline-block; overflow:hidden; position:relative; vertical-align:top"><span style="visibility:hidden">s</span><span data-swipe-row style="position:absolute; left:0; top:0; display:flex; transform:translateX(-50%)"><span>s</span><span>s</span></span></span><span style="display:inline-block; overflow:hidden; position:relative; vertical-align:top"><span style="visibility:hidden">i</span><span data-swipe-row style="position:absolute; left:0; top:0; display:flex; transform:translateX(-50%)"><span>i</span><span>i</span></span></span><span style="display:inline-block; overflow:hidden; position:relative; vertical-align:top"><span style="visibility:hidden">g</span><span data-swipe-row style="position:absolute; left:0; top:0; display:flex; transform:translateX(-50%)"><span>g</span><span>g</span></span></span><span style="display:inline-block; overflow:hidden; position:relative; vertical-align:top"><span style="visibility:hidden">n</span><span data-swipe-row style="position:absolute; left:0; top:0; display:flex; transform:translateX(-50%)"><span>n</span><span>n</span></span></span><span style="display:inline-block; overflow:hidden; position:relative; vertical-align:top"><span style="visibility:hidden">e</span><span data-swipe-row style="position:absolute; left:0; top:0; display:flex; transform:translateX(-50%)"><span>e</span><span>e</span></span></span><span style="display:inline-block; overflow:hidden; position:relative; vertical-align:top"><span style="visibility:hidden">r</span><span data-swipe-row style="position:absolute; left:0; top:0; display:flex; transform:translateX(-50%)"><span>r</span><span>r</span></span></span></div>
     </div>
 
     
