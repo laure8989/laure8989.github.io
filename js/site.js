@@ -1,4 +1,27 @@
 (function () {
+  function parseDecls(str) {
+    var out = {};
+    str.split(';').forEach(function (rule) {
+      var i = rule.indexOf(':');
+      if (i === -1) return;
+      var prop = rule.slice(0, i).trim().replace(/-([a-z])/g, function (m, c) { return c.toUpperCase(); });
+      var val = rule.slice(i + 1).trim();
+      if (prop) out[prop] = val;
+    });
+    return out;
+  }
+  document.querySelectorAll('[style-hover]').forEach(function (el) {
+    var hoverDecls = parseDecls(el.getAttribute('style-hover'));
+    var baseline = {};
+    Object.keys(hoverDecls).forEach(function (prop) { baseline[prop] = el.style[prop] || ''; });
+    el.addEventListener('mouseenter', function () {
+      Object.keys(hoverDecls).forEach(function (prop) { el.style[prop] = hoverDecls[prop]; });
+    });
+    el.addEventListener('mouseleave', function () {
+      Object.keys(hoverDecls).forEach(function (prop) { el.style[prop] = baseline[prop]; });
+    });
+  });
+
   var cursor = document.getElementById('cursor-dot');
   if (cursor) {
     var mx = -100, my = -100, scale = 1;
