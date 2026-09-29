@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Geist:wght@400;500;600;700;900&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700;1,800&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<link rel="stylesheet" href="./case-study.css">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #241F1C; color: #FEF5E6; font-family: 'Geist', 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: inherit; }
+  ::selection { background: #FEF5E6; color: #241F1C; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+  @keyframes marqueeScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  #cursor-dot { position: fixed; top: 0; left: 0; width: 16px; height: 16px; border-radius: 50%; background: #FE713B; mix-blend-mode: hard-light; pointer-events: none; z-index: 9998; transform: translate(-200px,-200px); transition: transform 0.22s cubic-bezier(.2,.8,.2,1); will-change: transform; }
+  @media (pointer: coarse) { #cursor-dot { display: none; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+</helmet>
+
+<div ref="{{ rootRef }}" style="width:100%; max-width:1440px; margin:0 auto; background:#241F1C; overflow-x:hidden" onMouseMove="{{ onMove }}">
+
+  <div id="cursor-dot" ref="{{ cursorRef }}"></div>
+
+  <a href="#story" style="position:absolute; left:-9999px; top:0; background:#241F1C; color:#FEF5E6; padding:12px 18px; font-family:'Geist',sans-serif; font-size:11px" style-focus="left:12px; top:12px; z-index:20">Skip to the story</a>
+
+  <div style="position:relative; display:flex; justify-content:space-between; align-items:flex-start; padding:clamp(18px,3vw,28px) clamp(20px,4vw,40px); z-index:5">
+    <a href="Home.dc.html" style="font-family: 'Geist',sans-serif; font-size: 10px; line-height: 1.5; letter-spacing: 0.04em; text-transform: uppercase; font-weight: 400">PORTFOLIO OF <b>LAUREN ANDERSON</b></a>
+    <div style="position:relative">
+      <button onClick="{{ toggleMenu }}" style="border:none; cursor:pointer; background:#241F1C; color:#FEF5E6; padding:9px 18px; border-radius:20px; font-family:'Geist',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase">Menu</button>
+      <div style="{{ menuPanelStyle }}">
+        <button onClick="{{ toggleMenu }}" aria-label="Close menu" style="border:none; background:none; cursor:pointer; align-self:flex-end; padding:4px; color:#241F1C; transform:rotate(0deg); transition:transform 0.3s ease" style-hover="transform:rotate(90deg)">
+          <svg width="22" height="22" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><line x1="4" y1="4" x2="20" y2="20"></line><line x1="20" y1="4" x2="4" y2="20"></line></svg>
+        </button>
+        <nav style="display:flex; flex-direction:column; align-items:flex-end; gap:2px; margin-top:clamp(20px,3vw,32px)">
+          <a href="Home.dc.html" style="display:inline-block; font-family:'Anton',sans-serif; font-weight:400; text-transform:uppercase; font-size:clamp(30px,4.2vw,44px); line-height:1.1; transform:rotate(0deg); transition:transform 0.25s ease, color 0.25s ease; color:#241F1C" style-hover="color:#FE713B; transform:rotate(-4deg)">Home</a>
+          
+          <a href="uploads/LAUREN ANDERSON - Graphic Designer Resume.pdf" target="_blank" rel="noopener" style="display:inline-block; font-family:'Anton',sans-serif; font-weight:400; text-transform:uppercase; font-size:clamp(30px,4.2vw,44px); line-height:1.1; transform:rotate(0deg); transition:transform 0.25s ease, color 0.25s ease; color:#241F1C" style-hover="color:#FE713B; transform:rotate(-4deg)">Resume</a>
+        </nav>
+        <a href="Home.dc.html#contact" style="display:inline-block; align-self:flex-end; font-family:'Anton',sans-serif; font-weight:400; text-transform:uppercase; font-size:clamp(30px,4.2vw,44px); line-height:1.1; transform:rotate(0deg); transition:transform 0.25s ease, color 0.25s ease; color:#241F1C" style-hover="color:#FE713B; transform:rotate(-4deg)">Contact</a><a href="Home.dc.html#work" style="display:inline-block; align-self:flex-end; font-family:'Anton',sans-serif; font-weight:400; text-transform:uppercase; font-size:clamp(30px,4.2vw,44px); line-height:1.1; transform:rotate(0deg); transition:transform 0.25s ease, color 0.25s ease; color:#241F1C" style-hover="color:#FE713B; transform:rotate(-4deg)">Work</a>
+        <div style="margin-top:clamp(24px,4vw,40px); padding-top:16px; border-top:1px solid #ECE0C4; display:flex; flex-wrap:wrap; justify-content:flex-end; gap:20px">
+          <a href="#contact" style="display:inline-flex; align-items:center; gap:4px; font-family:'Geist',sans-serif; font-size:12px; font-weight:400; letter-spacing:0.06em; text-transform:uppercase; color:#241F1C" style-hover="font-weight:600">LinkedIn ↗</a>
+          <a href="uploads/LAUREN ANDERSON - Graphic Designer Resume.pdf" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:4px; font-family:'Geist',sans-serif; font-size:12px; font-weight:400; letter-spacing:0.06em; text-transform:uppercase; color:#241F1C" style-hover="font-weight:600">Read.cv ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header style="position: relative; margin-top: -90px; padding: clamp(80px,14vw,180px) clamp(20px,4vw,40px) clamp(56px,8vw,88px); text-align: center; animation: fadeUp 0.7s ease both; overflow: hidden; height: 200px; padding-top: clamp(100px,14vw,180px)">
+    <div style="position:absolute; inset:0; z-index:0"><image-slot id="vb-hero" data-max-dim="2000" data-quality="0.85" shape="rect" fit="cover" src="https://i.postimg.cc/28qzmTMT/A-Taste-of-Bellevue-Mockup.png" placeholder="Visit Bellevue — hero image" style="width:100%; height:100%; opacity:0.6"></image-slot></div>
+    <div style="position:absolute; inset:0; z-index:1; background:linear-gradient(180deg, rgba(36,31,28,0.55), rgba(36,31,28,0.35), #241F1C 100%)"></div>
+    <div style="position:relative; z-index:2">
+      <span style="display:block; margin-bottom:clamp(16px,2.4vw,24px); font-family:'Geist',sans-serif; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#FEF5E6">Case Study 06 — Publication Design</span>
+      <h1 style="margin:0 auto; max-width:16ch; font-family:'Anton',sans-serif; font-weight:400; text-transform:uppercase; font-size:clamp(52px,10vw,160px); line-height:0.86; letter-spacing:-0.01em; text-wrap:balance; color:#FEF5E6">Visit Bellevue</h1>
+    </div>
+  </header>
+
+  <div style="max-width:760px; margin:0 auto; padding:0 clamp(20px,4vw,40px) clamp(48px,7vw,80px); text-align:center">
+    <p data-reveal-idx="0" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_0 }}">Seasonal visitors guides that are designed to help visitors explore Bellevue. They are distributed for free to hotel partners in exchange for advertising their properties. The guides support local businesses and strengthen the overall Bellevue brand.</p>
+    <a href="#solution" style="display:inline-flex; margin-top:clamp(24px,3vw,32px); background:#FEF5E6; color:#241F1C; padding:14px 26px; font-family:'Geist',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; border-radius:999px; font-weight:600; transition:background 0.25s ease" style-hover="background:#E4E468">View final product ↓</a>
+  </div>
+
+  <dl style="margin:0; max-width:900px; margin-left:auto; margin-right:auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(150px,1fr)); gap:24px clamp(20px,3vw,40px); padding:clamp(20px,3vw,28px) clamp(20px,4vw,40px); border-top:1px solid rgba(254,245,230,0.14); border-bottom:1px solid rgba(254,245,230,0.14); font-family:'Geist',sans-serif; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:#9C9284">
+    <div data-reveal-idx="24" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_24 }}"><dt>Client</dt><dd style="margin:0; color:#FEF5E6">Visit Bellevue</dd></div>
+    <div data-reveal-idx="25" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_25 }}"><dt>Industry</dt><dd style="margin:0; color:#FEF5E6">Travel &amp; Tourism</dd></div>
+    <div data-reveal-idx="26" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_26 }}"><dt>Role</dt><dd style="margin:0; color:#FEF5E6">Art Director &amp; Designer</dd></div>
+    <div data-reveal-idx="27" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_27 }}"><dt>Timeline</dt><dd style="margin:0; color:#FEF5E6">2023–2025</dd></div>
+  </dl>
+
+  <section id="story" style="padding:clamp(56px,9vw,110px) clamp(20px,4vw,40px) clamp(40px,6vw,72px); display:flex; flex-direction:column; gap:clamp(20px,3vw,28px); max-width:900px; margin:0 auto">
+    <h2 data-reveal-idx="1" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_1 }}">The Problem</h2>
+    <p data-reveal-idx="2" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_2 }}">With each new edition, the guide needed to introduce fresh content while remaining visually recognizable and aligned with the Visit Bellevue brand. The challenge was creating an editorial system flexible enough to accommodate changing stories, photography, and seasonal experiences without losing consistency from year to year.</p>
+  </section>
+
+  <section aria-label="Design principles" style="padding:clamp(40px,6vw,72px) clamp(20px,4vw,40px); display:flex; flex-direction:column; gap:clamp(28px,4vw,40px); max-width:900px; margin:0 auto">
+    <h2 data-reveal-idx="3" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_3 }}">Design Principles</h2>
+    <p data-reveal-idx="4" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_4 }}">Every design decision was guided by a consistent editorial approach, balancing inspiring storytelling with clear information to create a publication readers would enjoy exploring.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px,1fr)); gap:20px clamp(20px,3vw,40px)">
+      <div data-reveal-idx="5" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_5 }}"><span style="font-family:'Playfair Display',serif; font-size:clamp(28px,3.6vw,40px); line-height:1">Exploration</span><span style="font-family:'Geist',sans-serif; font-size:14px; color:#9C9284; line-height:1.6">Creating layouts that encourage readers to browse and discover Bellevue's experiences.</span></div>
+      <div data-reveal-idx="6" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_6 }}"><span style="font-family:'Playfair Display',serif; font-size:clamp(28px,3.6vw,40px); line-height:1">Storytelling</span><span style="font-family:'Geist',sans-serif; font-size:14px; color:#9C9284; line-height:1.6">Balancing destination photography with concise content to keep readers engaged.</span></div>
+      <div data-reveal-idx="7" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_7 }}"><span style="font-family:'Playfair Display',serif; font-size:clamp(28px,3.6vw,40px); line-height:1">Consistency</span><span style="font-family:'Geist',sans-serif; font-size:14px; color:#9C9284; line-height:1.6">Developing a flexible visual system that could adapt to new content while maintaining a recognizable identity.</span></div>
+    </div>
+  </section>
+
+  <section aria-label="Creative direction" style="padding:clamp(40px,6vw,72px) clamp(20px,4vw,40px); display:flex; flex-direction:column; gap:8px; max-width:900px; margin:0 auto">
+    <h2 data-reveal-idx="8" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_8 }}">Creative Direction</h2>
+    <div data-reveal-idx="9" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_9 }}">
+      <span style="font-family:'Playfair Display',serif; font-size:clamp(20px,2.4vw,28px); line-height:1.2">Cover Evolution</span>
+      <p data-reveal-idx="10" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_10 }}">As Bellevue's brand evolved, so did the visitor guide. The creative direction transitioned from expressive graphic treatments to a more editorial aesthetic that better reflected the city's luxury hotels, acclaimed dining, and premium experiences while maintaining a strong sense of place.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 16px; margin-top: 8px">
+        <figure style="margin:0; display:flex; flex-direction:column; gap:8px"><div style="height: clamp(220px,28vw,360px); background: url(&quot;./wb_1-msf44ss7-a7tj.png&quot;) center / cover no-repeat"></div><figcaption style="font-family:'Geist',sans-serif; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:#9C9284">2024 — PLAYFUL &amp; EXPRESSIVE</figcaption></figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:8px"><div style="height: clamp(220px,28vw,360px); background: url(&quot;./wb_2-msf46fvo-ad24.png&quot;) center / cover no-repeat"></div><figcaption style="font-family:'Geist',sans-serif; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:#9C9284">2025 — REFINED &amp; EDITORIAL</figcaption></figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:8px"><div style="height: clamp(220px,28vw,360px); background: url(&quot;./culinary-guide-mock-msf46pxe-nod7.png&quot;) center / cover no-repeat"></div><figcaption style="font-family:'Geist',sans-serif; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:#9C9284">2026 — LUXURY THROUGH SIMPLICITY</figcaption></figure>
+      </div>
+    </div>
+    <div data-reveal-idx="11" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_11 }}">
+      <span style="font-family:'Playfair Display',serif; font-size:clamp(20px,2.4vw,28px); line-height:1.2">Editorial Layouts</span>
+      <p data-reveal-idx="12" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_12 }}">As the publication evolved, the layouts became increasingly editorial. Graphic overlays were reduced, allowing photography, typography, and white space to establish a clearer hierarchy and create a more refined reading experience.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 16px; margin-top: 8px">
+        <figure style="margin:0; display:flex; flex-direction:column; gap:8px"><div style="height: clamp(220px,28vw,360px); background: url(&quot;./frame-1-msf473ta-e4ue.png&quot;) center / cover no-repeat"></div><figcaption style="font-family:'Geist',sans-serif; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:#9C9284">2024 — GRAPHIC EXPRESSION</figcaption></figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:8px"><div style="height: clamp(220px,28vw,360px); background: url(&quot;./frame-2-msf479o0-2rct.png&quot;) center / cover no-repeat"></div><figcaption style="font-family:'Geist',sans-serif; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:#9C9284">2025 — REFINED HIERARCHY</figcaption></figure>
+        <figure style="margin:0; display:flex; flex-direction:column; gap:8px"><div style="height: clamp(220px,28vw,360px); background: url(&quot;./frame-3-msf47f4k-p5th.png&quot;) center / cover no-repeat"></div><figcaption style="font-family:'Geist',sans-serif; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:#9C9284">2026 — EDITORIAL SIMPLICITY</figcaption></figure>
+      </div>
+    </div>
+
+    
+
+    
+  </section>
+
+  <section id="solution" aria-label="Case studies" style="padding:clamp(40px,6vw,72px) clamp(20px,4vw,40px); display:flex; flex-direction:column; gap:clamp(20px,3vw,32px); max-width:900px; margin:0 auto">
+    <h2 data-reveal-idx="13" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_13 }}">Case Studies</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:clamp(14px,2vw,20px)">
+      <div data-reveal-idx="14" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_14 }}"><div style="height: clamp(220px,28vw,360px); background: url(&quot;./chatgpt-image-aug-4-2026-12_28_37-am-msf47qec-h0r3.png&quot;) center / cover no-repeat"></div><a href="https://maddendigitalbooks.com/wavbigfw24/" target="_blank" rel="noopener" style="font-family:'Geist',sans-serif; font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:#FEF5E6; text-decoration-line:underline">View Guide</a></div>
+      <div data-reveal-idx="15" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_15 }}"><div style="height: clamp(220px,28vw,360px); background: url(&quot;./chatgpt-image-aug-4-2026-12_31_04-am-msf47ybg-x47b.png&quot;) center / cover no-repeat"></div><a href="https://maddendigitalbooks.com/wavbig25/" target="_blank" rel="noopener" style="font-family:'Geist',sans-serif; font-size:12px; letter-spacing:0.06em; text-transform:uppercase; text-decoration-line:underline; color:#FEF5E6">View Guide</a></div>
+      <div data-reveal-idx="16" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_16 }}"><div style="height: clamp(220px,28vw,360px); background: url(&quot;./a-taste-of-bellevue-mockup-msf487uo-jin7.png&quot;) center / cover no-repeat"></div><a href="https://maddendigitalbooks.com/wavbcg25/" target="_blank" rel="noopener" style="font-family:'Geist',sans-serif; font-size:12px; letter-spacing:0.06em; text-transform:uppercase; text-decoration-line:underline; color:#FEF5E6">View Guide</a></div>
+    </div>
+  </section>
+
+  <section aria-label="Key takeaways" style="padding:clamp(56px,8vw,88px) clamp(20px,4vw,40px); max-width:900px; margin:0 auto">
+    <h2 data-reveal-idx="17" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_17 }}">Key Takeaways</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:clamp(24px,3vw,40px)">
+      <div data-reveal-idx="18" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_18 }}"><span style="font-family:'Playfair Display',serif; font-style:italic; font-weight:700; font-size:20px; color:#FEF5E6">Creative Evolution</span><p data-reveal-idx="19" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_19 }}">Helped guide the publication's transition toward a more refined editorial aesthetic aligned with Bellevue's luxury brand.</p></div>
+      <div data-reveal-idx="20" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_20 }}"><span style="font-family:'Playfair Display',serif; font-style:italic; font-weight:700; font-size:20px; color:#FEF5E6">Editorial Systems</span><p data-reveal-idx="21" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_21 }}">Developed flexible layouts and visual standards that maintained consistency across multiple editions.</p></div>
+      <div data-reveal-idx="22" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_22 }}"><span style="font-family:'Playfair Display',serif; font-style:italic; font-weight:700; font-size:20px; color:#FEF5E6">Storytelling Through Design</span><p data-reveal-idx="23" onMouseEnter="{{ onHoverIn }}" onMouseLeave="{{ onHoverOut }}" style="{{ revealStyle_23 }}">Used hierarchy, typography, and immersive imagery to create a publication that inspired travel while remaining easy to navigate.</p></div>
+    </div>
+  </section>
+
+  <nav aria-label="Next project" style="border-top:1px solid rgba(254,245,230,0.14)">
+    <a href="Case-Study-Cosmos.dc.html" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px; padding:clamp(36px,5vw,64px) clamp(20px,4vw,40px); transition:background 0.3s ease" style-hover="background:#3A332C">
+      <div style="display:flex; flex-direction:column; gap:12px; min-width:0">
+        <span style="font-family:'Geist',sans-serif; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#9C9284">Next project — Event Marketing</span>
+        <span style="font-family:'Playfair Display',serif; font-size:clamp(30px,5vw,58px); line-height:1; letter-spacing:-0.02em">Cosmos</span>
+      </div>
+      <span aria-hidden="true" style="font-family:'Playfair Display',serif; font-size:clamp(30px,5vw,58px); line-height:1">⟶</span>
+    </a>
+  </nav>
+
+  <a href="Home.dc.html#work" style="display:block; overflow:hidden; padding:clamp(16px,2.4vw,24px) 0">
+    <div style="display:inline-flex; align-items:center; animation:marqueeScroll 22s linear infinite">
+      <span style="display:inline-flex; align-items:center; gap:clamp(20px,3vw,40px); padding:0 clamp(20px,3vw,40px); font-family:'Playfair Display',serif; font-style:italic; font-weight:700; font-size:clamp(40px,8vw,110px); white-space:nowrap">contact<span style="color:#FE713B; font-family:sans-serif; font-style:normal; font-size:0.4em">●</span></span>
+      <span style="display:inline-flex; align-items:center; gap:clamp(20px,3vw,40px); padding:0 clamp(20px,3vw,40px); font-family:'Playfair Display',serif; font-style:italic; font-weight:700; font-size:clamp(40px,8vw,110px); white-space:nowrap">contact<span style="color:#FE713B; font-family:sans-serif; font-style:normal; font-size:0.4em">●</span></span>
+    </div>
+  </a>
+
+  <footer id="contact" style="background:#241F1C; color:#FEF5E6; padding:clamp(48px,8vw,80px) clamp(20px,4vw,40px) clamp(24px,3vw,32px); display:flex; flex-direction:column; gap:clamp(32px,5vw,48px)">
+    <div style="text-align:center; font-family:'Anton',sans-serif; font-weight:400; text-transform:uppercase; font-size:clamp(38px,9vw,110px); line-height:0.95">Feel like<br>collaborating?</div>
+    <div style="display:flex; flex-direction:column; align-items:center; gap:0px">
+      <span style="font-family:'Geist',sans-serif; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#9C9284">Contact me</span>
+      <a href="mailto:lmanderson26155@gmail.com" style="font-family:'Playfair Display',serif; font-style:italic; font-weight:700; font-size:clamp(22px,4vw,42px); transition:color 0.25s ease" style-hover="color:#E4E468">lmanderson26155@gmail.com</a>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px 24px; padding-top:clamp(20px,3vw,28px); border-top:1px solid rgba(254,245,230,0.14); font-family:'Geist',sans-serif; font-size:10px; letter-spacing:0.09em; text-transform:uppercase; color:#9C9284">
+      <div style="display:flex; flex-wrap:wrap; gap:22px"><a href="#contact" style-hover="color:#E4E468">LinkedIn</a><a href="uploads/LAUREN ANDERSON - Graphic Designer Resume.pdf" target="_blank" rel="noopener" style-hover="color:#E4E468">Read.cv</a></div>
+      <span>© 2026 Lauren Anderson</span>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;processExpanded&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behavior&quot;}}">
+class Component extends DCLogic {
+  cursor = null;
+  mx = -100;
+  my = -100;
+  scale = 1;
+  updateCursor() {
+    if (!this.cursor) return;
+    this.cursor.style.transform = `translate(${this.mx}px, ${this.my}px) translate(-50%, -50%) scale(${this.scale})`;
+  }
+  componentDidMount() {
+    this._observed = new WeakSet();
+    this._revealIO = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const idx = entry.target.getAttribute('data-reveal-idx');
+          this.setState((s) => {
+            if (s.revealed[idx]) return null;
+            return { revealed: Object.assign({}, s.revealed, { [idx]: true }) };
+          });
+          setTimeout(() => this.forceUpdate(), 0);
+          this._revealIO.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -80px 0px' });
+    const observeAll = () => {
+      (this.rootEl || document).querySelectorAll('[data-reveal-idx]').forEach((el) => {
+        if (!this._observed.has(el)) {
+          this._observed.add(el);
+          this._revealIO.observe(el);
+        }
+      });
+    };
+    observeAll();
+    this._revealMo = new MutationObserver(observeAll);
+    this._revealMo.observe(this.rootEl || document.body, { childList: true, subtree: true });
+    this._revealSettle = setTimeout(observeAll, 300);
+    document.addEventListener('visibilitychange', observeAll);
+    this._revealFailsafe = setTimeout(() => {
+      let changed = false;
+      this.setState((s) => {
+        const next = Object.assign({}, s.revealed);
+        (this.rootEl || document).querySelectorAll('[data-reveal-idx]').forEach((el) => {
+          const idx = el.getAttribute('data-reveal-idx');
+          if (!next[idx]) { next[idx] = true; changed = true; }
+        });
+        return changed ? { revealed: next } : null;
+      });
+      setTimeout(() => this.forceUpdate(), 0);
+    }, 1800);
+  }
+  componentWillUnmount() {
+    if (this._revealIO) this._revealIO.disconnect();
+    if (this._revealMo) this._revealMo.disconnect();
+    if (this._revealSettle) clearTimeout(this._revealSettle);
+    if (this._revealFailsafe) clearTimeout(this._revealFailsafe);
+    document.removeEventListener('visibilitychange', this._noop);
+  }
+  state = { revealed: {}, detailOpen: false, menuOpen: false };
+  renderVals() {
+    const open = this.state.detailOpen || this.props.processExpanded === true;
+    return {
+      rootRef: (el) => { this.rootEl = el; },
+      cursorRef: (el) => { this.cursor = el; },
+      onMove: (e) => { this.mx = e.clientX; this.my = e.clientY; this.updateCursor(); },
+      onHoverIn: () => { this.scale = 2.8; this.updateCursor(); },
+      onHoverOut: () => { this.scale = 1; this.updateCursor(); },
+      revealStyle_24: Object.assign({}, {"display":"flex","flexDirection":"column","gap":"7px"}, this.state.revealed['24'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      revealStyle_25: Object.assign({}, {"display":"flex","flexDirection":"column","gap":"7px"}, this.state.revealed['25'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      revealStyle_26: Object.assign({}, {"display":"flex","flexDirection":"column","gap":"7px"}, this.state.revealed['26'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      revealStyle_27: Object.assign({}, {"display":"flex","flexDirection":"column","gap":"7px"}, this.state.revealed['27'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      revealStyle_0: Object.assign({}, {"margin":"0","fontSize":"14px","lineHeight":"1.5","color":"#9C9284","textWrap":"pretty"}, this.state.revealed['0'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      revealStyle_1: Object.assign({}, {"margin":"0","fontFamily":"'Anton',sans-serif","fontWeight":"400","fontSize":"clamp(34px,5.4vw,60px)","letterSpacing":"-0.01em","textTransform":"uppercase","color":"#FEF5E6","lineHeight":"0.98","maxWidth":"14ch"}, this.state.revealed['1'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      revealStyle_2: Object.assign({}, {"margin":"0","fontSize":"14px","lineHeight":"1.5","color":"#9C9284","textWrap":"pretty","width":"100%"}, this.state.revealed['2'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      revealStyle_3: Object.assign({}, {"margin":"0","fontFamily":"'Anton',sans-serif","fontWeight":"400","fontSize":"clamp(34px,5.4vw,60px)","letterSpacing":"-0.01em","textTransform":"uppercase","color":"#FEF5E6","lineHeight":"0.98","maxWidth":"14ch"}, this.state.revealed['3'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      revealStyle_4: Object.assign({}, {"margin":"0","fontSize":"14px","lineHeight":"1.5","color":"#9C9284","textWrap":"pretty","width":"100%"}, this.state.revealed['4'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      revealStyle_5: Object.assign({}, {"display":"flex","flexDirection":"column","gap":"8px","paddingTop":"16px","borderTop":"1px solid #FEF5E6"}, this.state.revealed['5'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      revealStyle_6: Object.assign({}, {"display":"flex","flexDirection":"column","gap":"8px","paddingTop":"16px","borderTop":"1px solid #FEF5E6"}, this.state.revealed['6'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      revealStyle_7: Object.assign({}, {"display":"flex","flexDirection":"column","gap":"8px","paddingTop":"16px","borderTop":"1px solid #FEF5E6"}, this.state.revealed['7'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      revealStyle_8: Object.assign({}, {"margin":"0 0 clamp(20px,3vw,28px)","fontFamily":"'Anton',sans-serif","fontWeight":"400","fontSize":"clamp(34px,5.4vw,60px)","letterSpacing":"-0.01em","textTransform":"uppercase","color":"#FEF5E6","lineHeight":"0.98"}, this.state.revealed['8'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      revealStyle_9: Object.assign({}, {"display":"flex","flexDirection":"column","gap":"14px","padding":"22px 0","borderTop":"1px solid rgba(254,245,230,0.14)"}, this.state.revealed['9'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      revealStyle_10: Object.assign({}, {"margin":"0","fontSize":"14px","lineHeight":"1.65","color":"#9C9284","textWrap":"pretty"}, this.state.revealed['10'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      revealStyle_11: Object.assign({}, {"display":"flex","flexDirection":"column","gap":"14px","padding":"22px 0","borderTop":"1px solid rgba(254,245,230,0.14)","borderBottom":"1px solid rgba(254,245,230,0.14)"}, this.state.revealed['11'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      revealStyle_12: Object.assign({}, {"margin":"0","fontSize":"14px","lineHeight":"1.65","color":"#9C9284","textWrap":"pretty"}, this.state.revealed['12'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      revealStyle_13: Object.assign({}, {"margin":"0","fontFamily":"'Anton',sans-serif","fontWeight":"400","fontSize":"clamp(34px,5.4vw,60px)","letterSpacing":"-0.01em","textTransform":"uppercase","color":"#FEF5E6","lineHeight":"0.98"}, this.state.revealed['13'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      revealStyle_14: Object.assign({}, {"display":"flex","flexDirection":"column","gap":"10px"}, this.state.revealed['14'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      revealStyle_15: Object.assign({}, {"display":"flex","flexDirection":"column","gap":"10px"}, this.state.revealed['15'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      revealStyle_16: Object.assign({}, {"display":"flex","flexDirection":"column","gap":"10px"}, this.state.revealed['16'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      revealStyle_17: Object.assign({}, {"margin":"0 0 clamp(28px,4vw,40px)","fontFamily":"'Anton',sans-serif","fontWeight":"400","fontSize":"clamp(34px,5.4vw,60px)","letterSpacing":"-0.01em","textTransform":"uppercase","color":"#FEF5E6","lineHeight":"0.98"}, this.state.revealed['17'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      revealStyle_18: Object.assign({}, {"display":"flex","flexDirection":"column","gap":"10px"}, this.state.revealed['18'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      revealStyle_19: Object.assign({}, {"margin":"0","fontSize":"14px","lineHeight":"1.65","color":"#9C9284","textWrap":"pretty"}, this.state.revealed['19'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      revealStyle_20: Object.assign({}, {"display":"flex","flexDirection":"column","gap":"10px"}, this.state.revealed['20'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      revealStyle_21: Object.assign({}, {"margin":"0","fontSize":"14px","lineHeight":"1.65","color":"#9C9284","textWrap":"pretty"}, this.state.revealed['21'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      revealStyle_22: Object.assign({}, {"display":"flex","flexDirection":"column","gap":"10px"}, this.state.revealed['22'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      revealStyle_23: Object.assign({}, {"margin":"0","fontSize":"14px","lineHeight":"1.65","color":"#9C9284","textWrap":"pretty"}, this.state.revealed['23'] ? {opacity:1, transform:'none'} : {opacity:0, transform:'translateY(28px)'}, {transition:'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)'}),
+      toggleMenu: () => this.setState((s) => ({ menuOpen: !s.menuOpen })),
+      menuPanelStyle: {
+        position: 'fixed', top: 'clamp(12px,2vw,24px)', right: 'clamp(12px,2vw,24px)',
+        width: 'fit-content', maxWidth: '90vw', display: 'flex', flexDirection: 'column',
+        background: '#FFFFFF', borderRadius: '24px', padding: 'clamp(20px,3vw,32px)',
+        paddingLeft: 'calc(clamp(20px,3vw,32px) + 60px)',
+        boxShadow: '0 30px 70px rgba(36,31,28,0.22)', zIndex: 60,
+        opacity: this.state.menuOpen ? 1 : 0,
+        transform: this.state.menuOpen ? 'translateY(0)' : 'translateY(-10px)',
+        pointerEvents: this.state.menuOpen ? 'auto' : 'none',
+        transition: 'opacity 0.25s ease, transform 0.25s ease',
+      },
+      detailOpen: open,
+      detailDisplay: open ? 'block' : 'none',
+      detailLabel: open ? 'Hide wireframes & iterations —' : 'See wireframes & iterations +',
+      toggleDetail: () => this.setState((s) => ({ detailOpen: !s.detailOpen })),
+    };
+  }
+}
+
+</script>
+</body>
+</html>
