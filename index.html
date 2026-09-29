@@ -36,12 +36,12 @@
 
   <a href="#work" style="position:absolute; left:-9999px; top:0; background:#241F1C; color:#FEF5E6; padding:12px 18px; font-family:'Geist',sans-serif; font-size:11px" style-focus="left:12px; top:12px; z-index:20">Skip to work</a>
 
-  <div style="position:relative; display:flex; justify-content:space-between; align-items:flex-start; padding:clamp(18px,3vw,28px) clamp(20px,4vw,40px)">
+  <div class="page-container" style="position:relative; display:flex; justify-content:space-between; align-items:flex-start; padding:clamp(18px,3vw,28px) var(--page-pad)">
     <a href="#top" style="font-family: 'Geist',sans-serif; font-size: 10px; line-height: 1.5; letter-spacing: 0.04em; text-transform: uppercase; font-weight: 400">PORTFOLIO OF <b>LAUREN ANDERSON</b></a>
     <div style="position:relative">
-      <button data-menu-toggle="" style="border:none; cursor:pointer; background:#241F1C; color:#FEF5E6; padding:9px 18px; border-radius:20px; font-family:'Geist',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase">Menu</button>
+      <button data-menu-toggle="" style="border:none; background:#241F1C; color:#FEF5E6; padding:9px 18px; border-radius:20px; font-family:'Geist',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase">Menu</button>
       <div class="menu-panel">
-        <button data-menu-toggle="" aria-label="Close menu" style="border:none; background:none; cursor:pointer; align-self:flex-end; padding:4px; color:#241F1C; transform:rotate(0deg); transition:transform 0.3s ease" style-hover="transform:rotate(90deg)">
+        <button data-menu-toggle="" aria-label="Close menu" style="border:none; background:none; align-self:flex-end; padding:4px; color:#241F1C; transform:rotate(0deg); transition:transform 0.3s ease" style-hover="transform:rotate(90deg)">
           <svg width="22" height="22" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><line x1="4" y1="4" x2="20" y2="20"></line><line x1="20" y1="4" x2="4" y2="20"></line></svg>
         </button>
         <nav style="display:flex; flex-direction:column; align-items:flex-end; gap:2px; margin-top:clamp(20px,3vw,32px)">
@@ -59,7 +59,7 @@
     </div>
   </div>
 
-  <header id="top" style="position: relative; padding: clamp(24px,4vw,40px) clamp(20px,4vw,40px) clamp(48px,7vw,84px); animation: fadeUp 0.7s ease both; padding-bottom: 116px">
+  <header class="page-container" id="top" style="position: relative; padding: clamp(24px,4vw,40px) var(--page-pad) clamp(48px,7vw,84px); animation: fadeUp 0.7s ease both; padding-bottom: 116px">
     <div class="hero-portrait" style="position: absolute; right: clamp(-40px,2vw,40px); width: clamp(220px,32vw,430px); height: clamp(220px,32vw,430px); z-index: 0">
       <div style="position:absolute; inset:0; border-radius:50%; overflow:hidden; border:1px solid rgba(36,31,28,0.16)"><div style="width:100%; height:100%; background:url(assets/images/home-portrait.webp) center / cover no-repeat"></div></div>
       <img src="assets/images/group-18.png" width="357" height="334" alt="" style="position:absolute; top:-3%; right:4%; width:38%; height:auto; z-index:2; transform:rotate(12deg)"><img src="assets/images/group-16.png" width="287" height="291" alt="" style="position: absolute; left: 3px; width: 38%; height: auto; z-index: 2; transform: rotate(-10deg); top: 223px">
@@ -81,14 +81,14 @@
     
 </header>
 
-  <section id="about" style="padding: clamp(24px,4vw,40px) clamp(20px,4vw,40px) clamp(56px,8vw,96px); margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: clamp(20px,3vw,28px); width: 100%; max-width: 1100px; box-sizing: border-box; text-align: center; padding-top: 50px">
+  <section id="about" style="padding: clamp(24px,4vw,40px) var(--page-pad) clamp(56px,8vw,96px); margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: clamp(20px,3vw,28px); width: 100%; max-width: 1100px; box-sizing: border-box; text-align: center; padding-top: 50px">
     
     <span style="font-family:'Geist',sans-serif; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#6E655C">About me</span>
     <p class="reveal" style="margin:0; font-family:'Anton',sans-serif; font-weight:400; text-transform:uppercase; font-size:clamp(22px,3.6vw,36px); line-height:1.1; letter-spacing:0.01em; text-wrap:balance; text-align:center; max-width:948px; width:100%; margin-left:auto; margin-right:auto">HEY THERE, MY NAME'S LAUREN! I'M A GRAPHIC DESIGNER WITH SEVEN YEARS OF EXPERIENCE GROWING BRANDS THROUGH <span style="background:#FE713B; padding:0 6px; border-radius:6px; display:inline-block; transform:rotate(-2deg); box-decoration-break:clone; -webkit-box-decoration-break:clone">PRINT, WEB,</span> AND <span style="background:#E4E468; padding:0 6px; border-radius:6px; display:inline-block; transform:rotate(2deg); box-decoration-break:clone; -webkit-box-decoration-break:clone">DIGITAL MARKETING.</span>&nbsp;I USE DESIGN TO CUT THROUGH THE SEA OF SAMENESS AND BRING A BRAND'S TRUE PERSONALITY TO LIFE.</p>
     <span style="font-family:'Geist',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#6E655C">Cincinnati, OH · Visual Design</span>
   </section>
 
-  <section id="work" aria-label="Selected work" style="padding:0 clamp(20px,4vw,40px) clamp(48px,7vw,80px)">
+  <section class="page-container" id="work" aria-label="Selected work" style="padding:0 var(--page-pad) clamp(48px,7vw,80px)">
     <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; margin-bottom: clamp(32px,5vw,52px)">
       <div>
         <div style="font-family: 'Playfair Display',serif; font-style: italic; font-weight: 700; font-size: clamp(26px,4.4vw,48px); line-height: 1; margin-bottom: 8px">selected</div>
@@ -282,12 +282,8 @@
     </div>
   </a>
 
-  <footer id="contact" style="background:#241F1C; color:#FEF5E6; padding:clamp(48px,8vw,80px) clamp(20px,4vw,40px) clamp(24px,3vw,32px); display:flex; flex-direction:column; gap:clamp(32px,5vw,48px)">
-    <div style="text-align:center; font-family:'Anton',sans-serif; font-weight:400; text-transform:uppercase; font-size:clamp(38px,9vw,110px); line-height:0.95">Feel like<br>collaborating?</div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 0px">
-      <span style="font-family:'Geist',sans-serif; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#9C9284">Contact me</span>
-      <a href="mailto:lmanderson26155@gmail.com" style="font-family:'Playfair Display',serif; font-style:italic; font-weight:700; font-size:clamp(22px,4vw,42px); transition:color 0.25s ease" style-hover="color:#E4E468">lmanderson26155@gmail.com</a>
-    </div>
+  <footer class="page-band" id="contact" style="background:#241F1C; color:#FEF5E6; padding:clamp(48px,8vw,80px) var(--page-pad) clamp(24px,3vw,32px); display:flex; flex-direction:column; gap:clamp(32px,5vw,48px)">
+    <a href="mailto:lmanderson26155@gmail.com" target="_blank" rel="noopener" aria-label="Email Lauren Anderson" data-cursor-solid="" style="display:block; width:fit-content; margin:0 auto; text-align:center; font-family:'Anton',sans-serif; font-weight:400; text-transform:uppercase; font-size:clamp(38px,9vw,110px); line-height:0.95; transition:color 0.25s ease" style-hover="color:#E4E468">Feel like<br>collaborating?</a>
     <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px 24px; padding-top:clamp(20px,3vw,28px); border-top:1px solid rgba(254,245,230,0.14); font-family:'Geist',sans-serif; font-size:10px; letter-spacing:0.09em; text-transform:uppercase; color:#9C9284">
       <div style="display:flex; flex-wrap:wrap; gap:22px"><a href="https://www.linkedin.com/in/lauren-anderson-graphic-designer" target="_blank" rel="noopener" style-hover="color:#E4E468">LinkedIn</a><a href="assets/documents/lauren-anderson-resume.pdf" target="_blank" rel="noopener" style-hover="color:#E4E468">Read.cv</a></div>
       <span>© 2026 Lauren Anderson</span>
@@ -300,5 +296,6 @@
 </div>
 
 <script src="js/site.js" defer></script>
+<script src="js/lightbox.js" defer></script>
 </body>
 </html>

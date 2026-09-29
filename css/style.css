@@ -1,3 +1,9 @@
+/* Site layout grid: one centered outer container; extra width on large screens becomes outside whitespace. */
+:root { --page-max: 1600px; --page-pad: clamp(20px,4vw,40px); }
+@media (min-width: 1024px) { :root { --page-pad: clamp(40px,5vw,96px); } }
+.page-container { box-sizing: border-box; width: 100%; max-width: var(--page-max); margin-left: auto !important; margin-right: auto !important; }
+.page-band { padding-left: max(var(--page-pad), calc((100% - var(--page-max)) / 2 + var(--page-pad))) !important; padding-right: max(var(--page-pad), calc((100% - var(--page-max)) / 2 + var(--page-pad))) !important; }
+
 html { scroll-behavior: smooth; }
 body { margin: 0; font-family: 'Geist', 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 a { text-decoration: none; }
@@ -45,5 +51,19 @@ img { max-width: 100%; }
 .reveal > div[style*="url("]:only-child, .reveal > div[data-bg]:only-child { width: 100%; height: 100%; }
 
 /* Case-study media: align standard project imagery with the copy column (.cs-media). Full-bleed blocks are intentionally left unmarked. */
-:root { --cs-content-max: 900px; --cs-page-pad: clamp(20px,4vw,40px); }
+:root { --cs-content-max: 900px; --cs-page-pad: var(--page-pad); }
 .cs-media { box-sizing: content-box; width: auto !important; max-width: var(--cs-content-max) !important; margin-left: auto !important; margin-right: auto !important; padding-left: var(--cs-page-pad) !important; padding-right: var(--cs-page-pad) !important; }
+
+/* Custom cursor is the only cursor on pointer devices. */
+@media (hover: hover) and (pointer: fine) {
+  html, body, *, *::before, *::after { cursor: none !important; }
+}
+#cursor-dot { z-index: 10001 !important; transition: transform 0.22s cubic-bezier(.2,.8,.2,1), scale 0.22s cubic-bezier(.2,.8,.2,1); }
+#cursor-dot::before, #cursor-dot::after { content: ""; position: absolute; left: 50%; top: 50%; width: 6.5px; height: 0.75px; border-radius: 1px; background: #241F1C; opacity: 0; transform: translate(-50%,-50%) rotate(0deg) scale(.4); transition: opacity .22s ease, transform .3s cubic-bezier(.2,.8,.2,1); }
+#cursor-dot::after { transform: translate(-50%,-50%) rotate(90deg) scale(.4); }
+#cursor-dot.is-expand::before, #cursor-dot.is-close::before { opacity: 1; transform: translate(-50%,-50%) rotate(0deg) scale(1); }
+#cursor-dot.is-expand::after, #cursor-dot.is-close::after { opacity: 1; transform: translate(-50%,-50%) rotate(90deg) scale(1); }
+#cursor-dot.is-close::before { transform: translate(-50%,-50%) rotate(45deg) scale(1); }
+#cursor-dot.is-close::after { transform: translate(-50%,-50%) rotate(135deg) scale(1); }
+
+#cursor-dot.is-solid { mix-blend-mode: normal; }
