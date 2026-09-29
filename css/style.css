@@ -1,6 +1,5 @@
 /* Site layout grid: one centered outer container; extra width on large screens becomes outside whitespace. */
-:root { --page-max: 1600px; --page-pad: clamp(20px,4vw,40px); }
-@media (min-width: 1024px) { :root { --page-pad: clamp(40px,5vw,96px); } }
+:root { --page-max: 1600px; --page-pad: clamp(24px,4vw,72px); }
 .page-container { box-sizing: border-box; width: 100%; max-width: var(--page-max); margin-left: auto !important; margin-right: auto !important; }
 .page-band { padding-left: max(var(--page-pad), calc((100% - var(--page-max)) / 2 + var(--page-pad))) !important; padding-right: max(var(--page-pad), calc((100% - var(--page-max)) / 2 + var(--page-pad))) !important; }
 
